@@ -1,0 +1,3013 @@
+{
+  "Action": {
+    "args": [
+      {
+        "name": "triggerOptions",
+        "type": "any"
+      },
+      {
+        "name": "condition",
+        "type": "Condition"
+      }
+    ],
+    "comment": "The action to be carried out following a trigger",
+    "family": "actions",
+    "name": "Action"
+  },
+  "ActionEvent": {
+    "args": [
+      {
+        "name": "source",
+        "type": "any"
+      },
+      {
+        "name": "pointerX",
+        "type": "number"
+      },
+      {
+        "name": "pointerY",
+        "type": "number"
+      },
+      {
+        "name": "meshUnderPointer",
+        "type": "Nullable"
+      },
+      {
+        "name": "sourceEvent",
+        "type": "any"
+      },
+      {
+        "name": "additionalData",
+        "type": "any"
+      }
+    ],
+    "comment": "ActionEvent is the event being sent when an action is triggered.",
+    "family": "actions",
+    "name": "ActionEvent"
+  },
+  "ActionManager": {
+    "args": [
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Action Manager manages all events to be triggered on a given mesh or the global scene.\nA single scene can have many Action Managers to handle predefined actions on specific meshes.",
+    "family": "actions",
+    "name": "ActionManager"
+  },
+  "AnaglyphArcRotateCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "alpha",
+        "type": "number"
+      },
+      {
+        "name": "beta",
+        "type": "number"
+      },
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "target",
+        "type": "Vector3"
+      },
+      {
+        "name": "interaxialDistance",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Camera used to simulate anaglyphic rendering (based on ArcRotateCamera)",
+    "family": "cameras",
+    "name": "AnaglyphArcRotateCamera"
+  },
+  "AnaglyphFreeCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "interaxialDistance",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Camera used to simulate anaglyphic rendering (based on FreeCamera)",
+    "family": "cameras",
+    "name": "AnaglyphFreeCamera"
+  },
+  "AnaglyphGamepadCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "interaxialDistance",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Camera used to simulate anaglyphic rendering (based on GamepadCamera)",
+    "family": "cameras",
+    "name": "AnaglyphGamepadCamera"
+  },
+  "AnaglyphUniversalCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "interaxialDistance",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Camera used to simulate anaglyphic rendering (based on UniversalCamera)",
+    "family": "cameras",
+    "name": "AnaglyphUniversalCamera"
+  },
+  "ArcFollowCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "alpha",
+        "type": "number"
+      },
+      {
+        "name": "beta",
+        "type": "number"
+      },
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "target",
+        "type": "Nullable"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Arc Rotate version of the follow camera.\nIt still follows a Defined mesh but in an Arc Rotate Camera fashion.",
+    "family": "cameras",
+    "name": "ArcFollowCamera"
+  },
+  "ArcRotateCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "alpha",
+        "type": "number"
+      },
+      {
+        "name": "beta",
+        "type": "number"
+      },
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "target",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "setActiveOnSceneIfNoneActive",
+        "type": "boolean"
+      }
+    ],
+    "comment": "This represents an orbital type of camera.\n\nThis camera always points towards a given target position and can be rotated around that target with the target as the centre of rotation. It can be controlled with cursors and mouse, or with touch events.\nThink of this camera as one orbiting its target position, or more imaginatively as a spy satellite orbiting the earth. Its position relative to the target (earth) can be set by three parameters, alpha (radians) the longitudinal rotation, beta (radians) the latitudinal rotation and radius the distance from the target position.",
+    "family": "cameras",
+    "name": "ArcRotateCamera"
+  },
+  "BackgroundMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Background material used to create an efficient environement around your scene.",
+    "family": "materials",
+    "name": "BackgroundMaterial"
+  },
+  "BaseTexture": {
+    "args": [
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Base class of all the textures in babylon.\nIt groups all the common properties the materials, post process, lights... might need\nin order to make a correct use of the texture.",
+    "family": "materials",
+    "name": "BaseTexture"
+  },
+  "Box": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a box mesh\n* The parameter `size` sets the size (float) of each box side (default 1)\n* You can set some different box dimensions by using the parameters `width`, `height` and `depth` (all by default have the same value of `size`)\n* You can set different colors and different images to each box side by using the parameters `faceColors` (an array of 6 Color3 elements) and `faceUV` (an array of 6 Vector4 elements)\n* Please read this tutorial : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Box",
+    "options": [
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "width",
+        "type": "number"
+      },
+      {
+        "name": "height",
+        "type": "number"
+      },
+      {
+        "name": "depth",
+        "type": "number"
+      },
+      {
+        "name": "faceUV",
+        "type": [
+          "Vector4"
+        ]
+      },
+      {
+        "name": "faceColors",
+        "type": [
+          "Color4"
+        ]
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "Camera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "setActiveOnSceneIfNoneActive",
+        "type": "boolean"
+      }
+    ],
+    "comment": "This is the base class of all the camera used in the application.",
+    "family": "cameras",
+    "name": "Camera"
+  },
+  "ColorGradingTexture": {
+    "args": [
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "This represents a color grading texture. This acts as a lookup table LUT, useful during post process\nIt can help converting any input color in a desired output one. This can then be used to create effects\nfrom sepia, black and white to sixties or futuristic rendering...\n\nThe only supported format is currently 3dl.\nMore information on LUT: https://en.wikipedia.org/wiki/3D_lookup_table",
+    "family": "materials",
+    "name": "ColorGradingTexture"
+  },
+  "CubeTexture": {
+    "args": [
+      {
+        "name": "rootUrl",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "extensions",
+        "type": "Nullable"
+      },
+      {
+        "name": "noMipmap",
+        "type": "boolean"
+      },
+      {
+        "name": "files",
+        "type": "Nullable"
+      },
+      {
+        "name": "onLoad",
+        "type": "Nullable"
+      },
+      {
+        "name": "onError",
+        "type": "Nullable"
+      },
+      {
+        "name": "format",
+        "type": "number"
+      },
+      {
+        "name": "prefiltered",
+        "type": "boolean"
+      },
+      {
+        "name": "forcedExtension",
+        "type": "any"
+      },
+      {
+        "name": "createPolynomials",
+        "type": "boolean"
+      },
+      {
+        "name": "lodScale",
+        "type": "number"
+      },
+      {
+        "name": "lodOffset",
+        "type": "number"
+      }
+    ],
+    "comment": "Class for creating a cube texture",
+    "family": "materials",
+    "name": "CubeTexture"
+  },
+  "CubeTextureAssetTask": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "extensions",
+        "type": "union"
+      },
+      {
+        "name": "noMipmap",
+        "type": "union"
+      },
+      {
+        "name": "files",
+        "type": "union"
+      }
+    ],
+    "comment": "Define a task used by AssetsManager to load cube textures",
+    "family": "materials",
+    "name": "CubeTextureAssetTask"
+  },
+  "CustomProceduralTexture": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "texturePath",
+        "type": "string"
+      },
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "fallbackTexture",
+        "type": "Texture"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      }
+    ],
+    "comment": "Procedural texturing is a way to programmatically create a texture. There are 2 types of procedural textures: code-only, and code that references some classic 2D images, sometimes called 'refMaps' or 'sampler' images.\nCustom Procedural textures are the easiest way to create your own procedural in your application.",
+    "family": "materials",
+    "name": "CustomProceduralTexture"
+  },
+  "Cylinder": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a cylinder or a cone mesh\n* The parameter `height` sets the height size (float) of the cylinder/cone (float, default 2).\n* The parameter `diameter` sets the diameter of the top and bottom cap at once (float, default 1).\n* The parameters `diameterTop` and `diameterBottom` overwrite the parameter `diameter` and set respectively the top cap and bottom cap diameter (floats, default 1). The parameter \"diameterBottom\" can't be zero.\n* The parameter `tessellation` sets the number of cylinder sides (positive integer, default 24). Set it to 3 to get a prism for instance.\n* The parameter `subdivisions` sets the number of rings along the cylinder height (positive integer, default 1).\n* The parameter `hasRings` (boolean, default false) makes the subdivisions independent from each other, so they become different faces.\n* The parameter `enclose`  (boolean, default false) adds two extra faces per subdivision to a sliced cylinder to close it around its height axis.\n* The parameter `arc` (float, default 1) is the ratio (max 1) to apply to the circumference to slice the cylinder.\n* You can set different colors and different images to each box side by using the parameters `faceColors` (an array of n Color3 elements) and `faceUV` (an array of n Vector4 elements).\n* The value of n is the number of cylinder faces. If the cylinder has only 1 subdivisions, n equals : top face + cylinder surface + bottom face = 3\n* Now, if the cylinder has 5 independent subdivisions (hasRings = true), n equals : top face + 5 stripe surfaces + bottom face = 2 + 5 = 7\n* Finally, if the cylinder has 5 independent subdivisions and is enclose, n equals : top face + 5 x (stripe surface + 2 closing faces) + bottom face = 2 + 5 * 3 = 17\n* Each array (color or UVs) is always ordered the same way : the first element is the bottom cap, the last element is the top cap. The other elements are each a ring surface.\n* If `enclose` is false, a ring surface is one element.\n* If `enclose` is true, a ring surface is 3 successive elements in the array : the tubular surface, then the two closing faces.\n* Example how to set colors and textures on a sliced cylinder : http://www.html5gamedevs.com/topic/17945-creating-a-closed-slice-of-a-cylinder/#comment-106379\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.",
+    "family": "meshes",
+    "name": "Cylinder",
+    "options": [
+      {
+        "name": "height",
+        "type": "number"
+      },
+      {
+        "name": "diameterTop",
+        "type": "number"
+      },
+      {
+        "name": "diameterBottom",
+        "type": "number"
+      },
+      {
+        "name": "diameter",
+        "type": "number"
+      },
+      {
+        "name": "tessellation",
+        "type": "number"
+      },
+      {
+        "name": "subdivisions",
+        "type": "number"
+      },
+      {
+        "name": "arc",
+        "type": "number"
+      },
+      {
+        "name": "faceColors",
+        "type": [
+          "Color4"
+        ]
+      },
+      {
+        "name": "faceUV",
+        "type": [
+          "Vector4"
+        ]
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "hasRings",
+        "type": "boolean"
+      },
+      {
+        "name": "enclose",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "DashedLines": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a dashed line mesh\n* A dashed line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter\n* Like every other parametric shape, it is dynamically updatable by passing an existing instance of LineMesh to this static function\n* The parameter `points` is an array successive Vector3\n* The parameter `dashNb` is the intended total number of dashes (positive integer, default 200)\n* The parameter `dashSize` is the size of the dashes relatively the dash number (positive float, default 3)\n* The parameter `gapSize` is the size of the gap between two successive dashes relatively the dash number (positive float, default 1)\n* The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://doc.babylonjs.com/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines\n* When updating an instance, remember that only point positions can change, not the number of points\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "DashedLines",
+    "options": [
+      {
+        "name": "points",
+        "type": [
+          "Vector3"
+        ]
+      },
+      {
+        "name": "dashSize",
+        "type": "number"
+      },
+      {
+        "name": "gapSize",
+        "type": "number"
+      },
+      {
+        "name": "dashNb",
+        "type": "number"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "instance",
+        "type": "LinesMesh"
+      }
+    ],
+    "return": "LinesMesh"
+  },
+  "Decal": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "sourceMesh",
+        "type": "AbstractMesh"
+      }
+    ],
+    "comment": "Creates a decal mesh.\nA decal is a mesh usually applied as a model onto the surface of another mesh. So don't forget the parameter `sourceMesh` depicting the decal\n* The parameter `position` (Vector3, default `(0, 0, 0)`) sets the position of the decal in World coordinates\n* The parameter `normal` (Vector3, default `Vector3.Up`) sets the normal of the mesh where the decal is applied onto in World coordinates\n* The parameter `size` (Vector3, default `(1, 1, 1)`) sets the decal scaling\n* The parameter `angle` (float in radian, default 0) sets the angle to rotate the decal",
+    "family": "meshes",
+    "name": "Decal",
+    "options": [
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "normal",
+        "type": "Vector3"
+      },
+      {
+        "name": "size",
+        "type": "Vector3"
+      },
+      {
+        "name": "angle",
+        "type": "number"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "DepthTextureCreationOptions": {
+    "args": [],
+    "comment": "Define options used to create a depth texture",
+    "family": "materials",
+    "name": "DepthTextureCreationOptions"
+  },
+  "DeviceOrientationCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "This is a camera specifically designed to react to device orientation events such as a modern mobile device\nbeing tilted forward or back and left or right.",
+    "family": "cameras",
+    "name": "DeviceOrientationCamera"
+  },
+  "DirectionalLight": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "direction",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "A directional light is defined by a direction (what a surprise!).\nThe light is emitted from everywhere in the specified direction, and has an infinite range.\nAn example of a directional light is when a distance planet is lit by the apparently parallel lines of light from its sun. Light in a downward direction will light the top of an object.\nDocumentation: https://doc.babylonjs.com/babylon101/lights",
+    "family": "lights",
+    "name": "DirectionalLight"
+  },
+  "Disc": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a plane polygonal mesh.  By default, this is a disc\n* The parameter `radius` sets the radius size (float) of the polygon (default 0.5)\n* The parameter `tessellation` sets the number of polygon sides (positive integer, default 64). So a tessellation valued to 3 will build a triangle, to 4 a square, etc\n* You can create an unclosed polygon with the parameter `arc` (positive float, default 1), valued between 0 and 1, what is the ratio of the circumference : 2 x PI x ratio\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Disc",
+    "options": [
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "tessellation",
+        "type": "number"
+      },
+      {
+        "name": "arc",
+        "type": "number"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "DummyInternalTextureTracker": {
+    "args": [],
+    "comment": "Internal class used by the engine to get list of InternalTexture already bound to the GL context",
+    "family": "materials",
+    "name": "DummyInternalTextureTracker"
+  },
+  "DynamicTexture": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "options",
+        "type": "any"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "format",
+        "type": "number"
+      }
+    ],
+    "comment": "A class extending Texture allowing drawing on a texture",
+    "family": "materials",
+    "name": "DynamicTexture"
+  },
+  "Engine": {
+    "args": [
+      {
+        "name": "canvasOrContext",
+        "type": "Nullable"
+      },
+      {
+        "name": "antialias",
+        "type": "boolean"
+      },
+      {
+        "name": "options",
+        "type": "EngineOptions"
+      },
+      {
+        "name": "adaptToDeviceRatio",
+        "type": "boolean"
+      }
+    ],
+    "comment": "The engine class is responsible for interfacing with all lower-level APIs such as WebGL and Audio",
+    "family": "system",
+    "name": "Engine"
+  },
+  "EnvironmentTextureTools": {
+    "args": [],
+    "comment": "Sets of helpers addressing the serialization and deserialization of environment texture\nstored in a BabylonJS env file.\nThose files are usually stored as .env files.",
+    "family": "materials",
+    "name": "EnvironmentTextureTools"
+  },
+  "FollowCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "lockedTarget",
+        "type": "Nullable"
+      }
+    ],
+    "comment": "A follow camera takes a mesh as a target and follows it as it moves. Both a free camera version followCamera and\nan arc rotate version arcFollowCamera are available.",
+    "family": "cameras",
+    "name": "FollowCamera"
+  },
+  "FreeCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "setActiveOnSceneIfNoneActive",
+        "type": "boolean"
+      }
+    ],
+    "comment": "This represents a free type of camera. It can be usefull in First Person Shooter game for instance.\nPlease consider using the new UniversalCamera instead as it adds more functionality like the gamepad.",
+    "family": "cameras",
+    "name": "FreeCamera"
+  },
+  "GamepadCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "This represents a FPS type of camera. This is only here for back compat purpose.\nPlease use the UniversalCamera instead as both are identical.",
+    "family": "cameras",
+    "name": "GamepadCamera"
+  },
+  "Ground": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a ground mesh\n* The parameters `width` and `height` (floats, default 1) set the width and height sizes of the ground\n* The parameter `subdivisions` (positive integer) sets the number of subdivisions per side\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Ground",
+    "options": [
+      {
+        "name": "width",
+        "type": "number"
+      },
+      {
+        "name": "height",
+        "type": "number"
+      },
+      {
+        "name": "subdivisions",
+        "type": "number"
+      },
+      {
+        "name": "subdivisionsX",
+        "type": "number"
+      },
+      {
+        "name": "subdivisionsY",
+        "type": "number"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "GroundFromHeightMap": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a ground mesh from a height map\n* The parameter `url` sets the URL of the height map image resource.\n* The parameters `width` and `height` (positive floats, default 10) set the ground width and height sizes.\n* The parameter `subdivisions` (positive integer, default 1) sets the number of subdivision per side.\n* The parameter `minHeight` (float, default 0) is the minimum altitude on the ground.\n* The parameter `maxHeight` (float, default 1) is the maximum altitude on the ground.\n* The parameter `colorFilter` (optional Color3, default (0.3, 0.59, 0.11) ) is the filter to apply to the image pixel colors to compute the height.\n* The parameter `onReady` is a javascript callback function that will be called  once the mesh is just built (the height map download can last some time).\n* The parameter `alphaFilter` will filter any data where the alpha channel is below this value, defaults 0 (all data visible)\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.",
+    "family": "meshes",
+    "name": "GroundFromHeightMap",
+    "options": [
+      {
+        "name": "width",
+        "type": "number"
+      },
+      {
+        "name": "height",
+        "type": "number"
+      },
+      {
+        "name": "subdivisions",
+        "type": "number"
+      },
+      {
+        "name": "minHeight",
+        "type": "number"
+      },
+      {
+        "name": "maxHeight",
+        "type": "number"
+      },
+      {
+        "name": "colorFilter",
+        "type": "Color3"
+      },
+      {
+        "name": "alphaFilter",
+        "type": "number"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "onReady",
+        "type": "function"
+      }
+    ],
+    "return": "GroundMesh"
+  },
+  "GroundMesh": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Mesh representing the gorund",
+    "family": "type",
+    "name": "GroundMesh"
+  },
+  "HDRCubeTexture": {
+    "args": [
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "noMipmap",
+        "type": "boolean"
+      },
+      {
+        "name": "generateHarmonics",
+        "type": "boolean"
+      },
+      {
+        "name": "gammaSpace",
+        "type": "boolean"
+      },
+      {
+        "name": "reserved",
+        "type": "boolean"
+      },
+      {
+        "name": "onLoad",
+        "type": "Nullable"
+      },
+      {
+        "name": "onError",
+        "type": "Nullable"
+      }
+    ],
+    "comment": "This represents a texture coming from an HDR input.\n\nThe only supported format is currently panorama picture stored in RGBE format.\nExample of such files can be found on HDRLib: http://hdrlib.com/",
+    "family": "materials",
+    "name": "HDRCubeTexture"
+  },
+  "HDRCubeTextureAssetTask": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "noMipmap",
+        "type": "boolean"
+      },
+      {
+        "name": "generateHarmonics",
+        "type": "boolean"
+      },
+      {
+        "name": "gammaSpace",
+        "type": "boolean"
+      },
+      {
+        "name": "reserved",
+        "type": "boolean"
+      }
+    ],
+    "comment": "Define a task used by AssetsManager to load HDR cube textures",
+    "family": "materials",
+    "name": "HDRCubeTextureAssetTask"
+  },
+  "HemisphericLight": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "direction",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "The HemisphericLight simulates the ambient environment light,\nso the passed direction is the light reflection direction, not the incoming direction.",
+    "family": "lights",
+    "name": "HemisphericLight"
+  },
+  "IcoSphere": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a sphere based upon an icosahedron with 20 triangular faces which can be subdivided\n* The parameter `radius` sets the radius size (float) of the icosphere (default 1)\n* You can set some different icosphere dimensions, for instance to build an ellipsoid, by using the parameters `radiusX`, `radiusY` and `radiusZ` (all by default have the same value of `radius`)\n* The parameter `subdivisions` sets the number of subdivisions (postive integer, default 4). The more subdivisions, the more faces on the icosphere whatever its size\n* The parameter `flat` (boolean, default true) gives each side its own normals. Set it to false to get a smooth continuous light reflection on the surface\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "IcoSphere",
+    "options": [
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "radiusX",
+        "type": "number"
+      },
+      {
+        "name": "radiusY",
+        "type": "number"
+      },
+      {
+        "name": "radiusZ",
+        "type": "number"
+      },
+      {
+        "name": "flat",
+        "type": "boolean"
+      },
+      {
+        "name": "subdivisions",
+        "type": "number"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "InternalTexture": {
+    "args": [
+      {
+        "name": "engine",
+        "type": "Engine"
+      },
+      {
+        "name": "dataSource",
+        "type": "number"
+      }
+    ],
+    "comment": "Class used to store data associated with WebGL texture data for the engine\nThis class should not be used directly",
+    "family": "materials",
+    "name": "InternalTexture"
+  },
+  "KhronosTextureContainer": {
+    "args": [
+      {
+        "name": "arrayBuffer",
+        "type": "any"
+      },
+      {
+        "name": "facesExpected",
+        "type": "number"
+      },
+      {
+        "name": "threeDExpected",
+        "type": "boolean"
+      },
+      {
+        "name": "textureArrayExpected",
+        "type": "boolean"
+      }
+    ],
+    "comment": "for description see https://www.khronos.org/opengles/sdk/tools/KTX/\nfor file layout see https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/",
+    "family": "materials",
+    "name": "KhronosTextureContainer"
+  },
+  "Lathe": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates lathe mesh.\nThe lathe is a shape with a symetry axis : a 2D model shape is rotated around this axis to design the lathe\n* The parameter `shape` is a required array of successive Vector3. This array depicts the shape to be rotated in its local space : the shape must be designed in the xOy plane and will be rotated around the Y axis. It's usually a 2D shape, so the Vector3 z coordinates are often set to zero\n* The parameter `radius` (positive float, default 1) is the radius value of the lathe\n* The parameter `tessellation` (positive integer, default 64) is the side number of the lathe\n* The parameter `clip` (positive integer, default 0) is the number of sides to not create without effecting the general shape of the sides\n* The parameter `arc` (positive float, default 1) is the ratio of the lathe. 0.5 builds for instance half a lathe, so an opened shape\n* The parameter `closed` (boolean, default true) opens/closes the lathe circumference. This should be set to false when used with the parameter \"arc\"\n* The parameter `cap` sets the way the extruded shape is capped. Possible values : BABYLON.Mesh.NO_CAP (default), BABYLON.Mesh.CAP_START, BABYLON.Mesh.CAP_END, BABYLON.Mesh.CAP_ALL\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The optional parameter `invertUV` (boolean, default false) swaps in the geometry the U and V coordinates to apply a texture\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Lathe",
+    "options": [
+      {
+        "name": "shape",
+        "type": [
+          "Vector3"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "tessellation",
+        "type": "number"
+      },
+      {
+        "name": "clip",
+        "type": "number"
+      },
+      {
+        "name": "arc",
+        "type": "number"
+      },
+      {
+        "name": "closed",
+        "type": "boolean"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "cap",
+        "type": "number"
+      },
+      {
+        "name": "invertUV",
+        "type": "boolean"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "Light": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Base class of all the lights in Babylon. It groups all the generic information about lights.\nLights are used, as you would expect, to affect how meshes are seen, in terms of both illumination and colour.\nAll meshes allow light to pass through them unless shadow generation is activated. The default number of lights allowed is four but this can be increased.",
+    "family": "lights",
+    "name": "Light"
+  },
+  "LineSystem": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a line system mesh. A line system is a pool of many lines gathered in a single mesh\n* A line system mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of lines as an input parameter\n* Like every other parametric shape, it is dynamically updatable by passing an existing instance of LineSystem to this static function\n* The parameter `lines` is an array of lines, each line being an array of successive Vector3\n* The optional parameter `instance` is an instance of an existing LineSystem object to be updated with the passed `lines` parameter\n* The optional parameter `colors` is an array of line colors, each line colors being an array of successive Color4, one per line point\n* The optional parameter `useVertexAlpha` is to be set to `false` (default `true`) when you don't need the alpha blending (faster)\n* Updating a simple Line mesh, you just need to update every line in the `lines` array : http://doc.babylonjs.com/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines\n* When updating an instance, remember that only line point positions can change, not the number of points, neither the number of lines\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "LineSystem",
+    "options": [
+      {
+        "name": "lines",
+        "type": [
+          [
+            "Vector3"
+          ]
+        ]
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "instance",
+        "type": "Nullable"
+      },
+      {
+        "name": "colors",
+        "type": "Nullable"
+      },
+      {
+        "name": "useVertexAlpha",
+        "type": "boolean"
+      }
+    ],
+    "return": "LinesMesh"
+  },
+  "Lines": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a line mesh\nA line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter\n* Like every other parametric shape, it is dynamically updatable by passing an existing instance of LineMesh to this static function\n* The parameter `points` is an array successive Vector3\n* The optional parameter `instance` is an instance of an existing LineMesh object to be updated with the passed `points` parameter : http://doc.babylonjs.com/tutorials/How_to_dynamically_morph_a_mesh#lines-and-dashedlines\n* The optional parameter `colors` is an array of successive Color4, one per line point\n* The optional parameter `useVertexAlpha` is to be set to `false` (default `true`) when you don't need alpha blending (faster)\n* When updating an instance, remember that only point positions can change, not the number of points\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Lines",
+    "options": [
+      {
+        "name": "points",
+        "type": [
+          "Vector3"
+        ]
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "instance",
+        "type": "Nullable"
+      },
+      {
+        "name": "colors",
+        "type": [
+          "Color4"
+        ]
+      },
+      {
+        "name": "useVertexAlpha",
+        "type": "boolean"
+      }
+    ],
+    "return": "LinesMesh"
+  },
+  "LinesMesh": {
+    "args": [],
+    "family": "type",
+    "name": "LinesMesh"
+  },
+  "Material": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "doNotAdd",
+        "type": "boolean"
+      }
+    ],
+    "comment": "Base class for the main features of a material in Babylon.js",
+    "family": "materials",
+    "name": "Material"
+  },
+  "MaterialHelper": {
+    "args": [],
+    "comment": "\"Static Class\" containing the most commonly used helper while dealing with material for\nrendering purpose.\n\nIt contains the basic tools to help defining defines, binding uniform for the common part of the materials.\n\nThis works by convention in BabylonJS but is meant to be use only with shader following the in place naming rules and conventions.",
+    "family": "materials",
+    "name": "MaterialHelper"
+  },
+  "Mesh": {
+    "args": [],
+    "family": "type",
+    "name": "Mesh"
+  },
+  "MirrorTexture": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "size",
+        "type": "union"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      },
+      {
+        "name": "type",
+        "type": "number"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "generateDepthBuffer",
+        "type": "boolean"
+      }
+    ],
+    "comment": "Mirror texture can be used to simulate the view from a mirror in a scene.\nIt will dynamically be rendered every frame to adapt to the camera point of view.\nYou can then easily use it as a reflectionTexture on a flat surface.\nIn case the surface is not a plane, please consider relying on reflection probes.",
+    "family": "materials",
+    "name": "MirrorTexture"
+  },
+  "MultiMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "A multi-material is used to apply different materials to different parts of the same object without the need of\nseparate meshes. This can be use to improve performances.",
+    "family": "materials",
+    "name": "MultiMaterial"
+  },
+  "NoiseProceduralTexture": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "fallbackTexture",
+        "type": "Texture"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      }
+    ],
+    "comment": "Class used to generate noise procedural textures",
+    "family": "materials",
+    "name": "NoiseProceduralTexture"
+  },
+  "PBRBaseMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "The Physically based material base class of BJS.\n\nThis offers the main features of a standard PBR material.\nFor more information, please refer to the documentation :\nhttp://doc.babylonjs.com/extensions/Physically_Based_Rendering",
+    "family": "materials",
+    "name": "PBRBaseMaterial"
+  },
+  "PBRBaseSimpleMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "The Physically based simple base material of BJS.\n\nThis enables better naming and convention enforcements on top of the pbrMaterial.\nIt is used as the base class for both the specGloss and metalRough conventions.",
+    "family": "materials",
+    "name": "PBRBaseSimpleMaterial"
+  },
+  "PBRMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "The Physically based material of BJS.\n\nThis offers the main features of a standard PBR material.\nFor more information, please refer to the documentation :\nhttp://doc.babylonjs.com/extensions/Physically_Based_Rendering",
+    "family": "materials",
+    "name": "PBRMaterial"
+  },
+  "PBRMetallicRoughnessMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "The PBR material of BJS following the metal roughness convention.\n\nThis fits to the PBR convention in the GLTF definition:\nhttps://github.com/KhronosGroup/glTF/tree/2.0/specification/2.0",
+    "family": "materials",
+    "name": "PBRMetallicRoughnessMaterial"
+  },
+  "PBRSpecularGlossinessMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "The PBR material of BJS following the specular glossiness convention.\n\nThis fits to the PBR convention in the GLTF definition:\nhttps://github.com/KhronosGroup/glTF/tree/2.0/extensions/Khronos/KHR_materials_pbrSpecularGlossiness",
+    "family": "materials",
+    "name": "PBRSpecularGlossinessMaterial"
+  },
+  "Plane": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a plane mesh\n* The parameter `size` sets the size (float) of both sides of the plane at once (default 1)\n* You can set some different plane dimensions by using the parameters `width` and `height` (both by default have the same value of `size`)\n* The parameter `sourcePlane` is a Plane instance. It builds a mesh plane from a Math plane\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Plane",
+    "options": [
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "width",
+        "type": "number"
+      },
+      {
+        "name": "height",
+        "type": "number"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sourcePlane",
+        "type": "Plane"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "PointLight": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "A point light is a light defined by an unique point in world space.\nThe light is emitted in every direction from this point.\nA good example of a point light is a standard light bulb.\nDocumentation: https://doc.babylonjs.com/babylon101/lights",
+    "family": "lights",
+    "name": "PointLight"
+  },
+  "Polygon": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a polygon mesh\nThe polygon's shape will depend on the input parameters and is constructed parallel to a ground mesh\n* The parameter `shape` is a required array of successive Vector3 representing the corners of the polygon in th XoZ plane, that is y = 0 for all vectors\n* You can set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4)\n* Remember you can only change the shape positions, not their number when updating a polygon",
+    "family": "meshes",
+    "name": "Polygon",
+    "options": [
+      {
+        "name": "shape",
+        "type": [
+          "Vector3"
+        ]
+      },
+      {
+        "name": "holes",
+        "type": [
+          [
+            "Vector3"
+          ]
+        ]
+      },
+      {
+        "name": "depth",
+        "type": "number"
+      },
+      {
+        "name": "faceUV",
+        "type": [
+          "Vector4"
+        ]
+      },
+      {
+        "name": "faceColors",
+        "type": [
+          "Color4"
+        ]
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "Polyhedron": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a polyhedron mesh\n* The parameter `type` (positive integer, max 14, default 0) sets the polyhedron type to build among the 15 embbeded types. Please refer to the type sheet in the tutorial to choose the wanted type\n* The parameter `size` (positive float, default 1) sets the polygon size\n* You can overwrite the `size` on each dimension bu using the parameters `sizeX`, `sizeY` or `sizeZ` (positive floats, default to `size` value)\n* You can build other polyhedron types than the 15 embbeded ones by setting the parameter `custom` (`polyhedronObject`, default null). If you set the parameter `custom`, this overwrittes the parameter `type`\n* A `polyhedronObject` is a formatted javascript object. You'll find a full file with pre-set polyhedra here : https://github.com/BabylonJS/Extensions/tree/master/Polyhedron\n* You can set the color and the UV of each side of the polyhedron with the parameters `faceColors` (Color4, default `(1, 1, 1, 1)`) and faceUV (Vector4, default `(0, 0, 1, 1)`)\n* To understand how to set `faceUV` or `faceColors`, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors\n* The parameter `flat` (boolean, default true). If set to false, it gives the polyhedron a single global face, so less vertices and shared normals. In this case, `faceColors` and `faceUV` are ignored\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Polyhedron",
+    "options": [
+      {
+        "name": "type",
+        "type": "number"
+      },
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "sizeX",
+        "type": "number"
+      },
+      {
+        "name": "sizeY",
+        "type": "number"
+      },
+      {
+        "name": "sizeZ",
+        "type": "number"
+      },
+      {
+        "name": "custom",
+        "type": "any"
+      },
+      {
+        "name": "faceUV",
+        "type": [
+          "Vector4"
+        ]
+      },
+      {
+        "name": "faceColors",
+        "type": [
+          "Color4"
+        ]
+      },
+      {
+        "name": "flat",
+        "type": "boolean"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "PositionNormalTextureVertex": {
+    "args": [
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "normal",
+        "type": "Vector3"
+      },
+      {
+        "name": "uv",
+        "type": "Vector2"
+      }
+    ],
+    "comment": "Contains position, normal and uv vectors for a vertex",
+    "family": "materials",
+    "name": "PositionNormalTextureVertex"
+  },
+  "ProceduralTexture": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "size",
+        "type": "any"
+      },
+      {
+        "name": "fragment",
+        "type": "any"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "fallbackTexture",
+        "type": "Nullable"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      },
+      {
+        "name": "isCube",
+        "type": "boolean"
+      }
+    ],
+    "comment": "Procedural texturing is a way to programmatically create a texture. There are 2 types of procedural textures: code-only, and code that references some classic 2D images, sometimes called 'refMaps' or 'sampler' images.\nThis is the base class of any Procedural texture and contains most of the shareable code.",
+    "family": "materials",
+    "name": "ProceduralTexture"
+  },
+  "ProceduralTextureSceneComponent": {
+    "args": [
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Defines the Procedural Texture scene component responsible to manage any Procedural Texture\nin a given scene.",
+    "family": "materials",
+    "name": "ProceduralTextureSceneComponent"
+  },
+  "PushMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Base class of materials working in push mode in babylon JS",
+    "family": "materials",
+    "name": "PushMaterial"
+  },
+  "RawCubeTexture": {
+    "args": [
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "data",
+        "type": "Nullable"
+      },
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "format",
+        "type": "number"
+      },
+      {
+        "name": "type",
+        "type": "number"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      },
+      {
+        "name": "invertY",
+        "type": "boolean"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "compression",
+        "type": "Nullable"
+      }
+    ],
+    "comment": "Raw cube texture where the raw buffers are passed in",
+    "family": "materials",
+    "name": "RawCubeTexture"
+  },
+  "RawTexture": {
+    "args": [
+      {
+        "name": "data",
+        "type": "ArrayBufferView"
+      },
+      {
+        "name": "width",
+        "type": "number"
+      },
+      {
+        "name": "height",
+        "type": "number"
+      },
+      {
+        "name": "format",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      },
+      {
+        "name": "invertY",
+        "type": "boolean"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "type",
+        "type": "number"
+      }
+    ],
+    "comment": "Raw texture can help creating a texture directly from an array of data.\nThis can be super useful if you either get the data from an uncompressed source or\nif you wish to create your texture pixel by pixel.",
+    "family": "materials",
+    "name": "RawTexture"
+  },
+  "RawTexture3D": {
+    "args": [
+      {
+        "name": "data",
+        "type": "ArrayBufferView"
+      },
+      {
+        "name": "width",
+        "type": "number"
+      },
+      {
+        "name": "height",
+        "type": "number"
+      },
+      {
+        "name": "depth",
+        "type": "number"
+      },
+      {
+        "name": "format",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      },
+      {
+        "name": "invertY",
+        "type": "boolean"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "textureType",
+        "type": "number"
+      }
+    ],
+    "comment": "Class used to store 3D textures containing user data",
+    "family": "materials",
+    "name": "RawTexture3D"
+  },
+  "RefractionTexture": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "size",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      }
+    ],
+    "comment": "Creates a refraction texture used by refraction channel of the standard material.\nIt is like a mirror but to see through a material.",
+    "family": "materials",
+    "name": "RefractionTexture"
+  },
+  "RenderTargetTexture": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "size",
+        "type": "union"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      },
+      {
+        "name": "doNotChangeAspectRatio",
+        "type": "boolean"
+      },
+      {
+        "name": "type",
+        "type": "number"
+      },
+      {
+        "name": "isCube",
+        "type": "boolean"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "generateDepthBuffer",
+        "type": "boolean"
+      },
+      {
+        "name": "generateStencilBuffer",
+        "type": "boolean"
+      },
+      {
+        "name": "isMulti",
+        "type": "boolean"
+      },
+      {
+        "name": "format",
+        "type": "number"
+      }
+    ],
+    "comment": "This Helps creating a texture that will be created from a camera in your scene.\nIt is basically a dynamic texture that could be used to create special effects for instance.\nActually, It is the base of lot of effects in the framework like post process, shadows, effect layers and rendering pipelines...",
+    "family": "materials",
+    "name": "RenderTargetTexture"
+  },
+  "Ribbon": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a ribbon mesh. The ribbon is a parametric shape.  It has no predefined shape. Its final shape will depend on the input parameters\n* The parameter `pathArray` is a required array of paths, what are each an array of successive Vector3. The pathArray parameter depicts the ribbon geometry\n* The parameter `closeArray` (boolean, default false) creates a seam between the first and the last paths of the path array\n* The parameter `closePath` (boolean, default false) creates a seam between the first and the last points of each path of the path array\n* The parameter `offset` (positive integer, default : rounded half size of the pathArray length), is taken in account only if the `pathArray` is containing a single path\n* It's the offset to join the points from the same path. Ex : offset = 10 means the point 1 is joined to the point 11\n* The optional parameter `instance` is an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter : http://doc.babylonjs.com/tutorials/How_to_dynamically_morph_a_mesh#ribbon\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The optional parameter `invertUV` (boolean, default false) swaps in the geometry the U and V coordinates to apply a texture\n* The parameter `uvs` is an optional flat array of `Vector2` to update/set each ribbon vertex with its own custom UV values instead of the computed ones\n* The parameters `colors` is an optional flat array of `Color4` to set/update each ribbon vertex with its own custom color values\n* Note that if you use the parameters `uvs` or `colors`, the passed arrays must be populated with the right number of elements, it is to say the number of ribbon vertices. Remember that if you set `closePath` to `true`, there's one extra vertex per path in the geometry\n* Moreover, you can use the parameter `color` with `instance` (to update the ribbon), only if you previously used it at creation time\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Ribbon",
+    "options": [
+      {
+        "name": "pathArray",
+        "type": [
+          [
+            "Vector3"
+          ]
+        ]
+      },
+      {
+        "name": "closeArray",
+        "type": "boolean"
+      },
+      {
+        "name": "closePath",
+        "type": "boolean"
+      },
+      {
+        "name": "offset",
+        "type": "number"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "instance",
+        "type": "Mesh"
+      },
+      {
+        "name": "invertUV",
+        "type": "boolean"
+      },
+      {
+        "name": "uvs",
+        "type": [
+          "Vector2"
+        ]
+      },
+      {
+        "name": "colors",
+        "type": [
+          "Color4"
+        ]
+      }
+    ],
+    "return": "Mesh"
+  },
+  "Scene": {
+    "args": [
+      {
+        "name": "engine",
+        "type": "Engine"
+      }
+    ],
+    "comment": "Represents a scene to be rendered by the engine.",
+    "family": "system",
+    "name": "Scene"
+  },
+  "ShaderMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "shaderPath",
+        "type": "any"
+      },
+      {
+        "name": "options",
+        "type": "Partial"
+      }
+    ],
+    "comment": "The ShaderMaterial object has the necessary methods to pass data from your scene to the Vertex and Fragment Shaders and returns a material that can be applied to any mesh.\n\nThis returned material effects how the mesh will look based on the code in the shaders.",
+    "family": "materials",
+    "name": "ShaderMaterial"
+  },
+  "ShadowLight": {
+    "args": [],
+    "comment": "Base implementation IShadowLight\nIt groups all the common behaviour in order to reduce dupplication and better follow the DRY pattern.",
+    "family": "lights",
+    "name": "ShadowLight"
+  },
+  "Sphere": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a sphere mesh\n* The parameter `diameter` sets the diameter size (float) of the sphere (default 1)\n* You can set some different sphere dimensions, for instance to build an ellipsoid, by using the parameters `diameterX`, `diameterY` and `diameterZ` (all by default have the same value of `diameter`)\n* The parameter `segments` sets the sphere number of horizontal stripes (positive integer, default 32)\n* You can create an unclosed sphere with the parameter `arc` (positive float, default 1), valued between 0 and 1, what is the ratio of the circumference (latitude) : 2 x PI x ratio\n* You can create an unclosed sphere on its height with the parameter `slice` (positive float, default1), valued between 0 and 1, what is the height ratio (longitude)\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Sphere",
+    "options": [
+      {
+        "name": "segments",
+        "type": "number"
+      },
+      {
+        "name": "diameter",
+        "type": "number"
+      },
+      {
+        "name": "diameterX",
+        "type": "number"
+      },
+      {
+        "name": "diameterY",
+        "type": "number"
+      },
+      {
+        "name": "diameterZ",
+        "type": "number"
+      },
+      {
+        "name": "arc",
+        "type": "number"
+      },
+      {
+        "name": "slice",
+        "type": "number"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "SpotLight": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "direction",
+        "type": "Vector3"
+      },
+      {
+        "name": "angle",
+        "type": "number"
+      },
+      {
+        "name": "exponent",
+        "type": "number"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "A spot light is defined by a position, a direction, an angle, and an exponent.\nThese values define a cone of light starting from the position, emitting toward the direction.\nThe angle, in radians, defines the size (field of illumination) of the spotlight's conical beam,\nand the exponent defines the speed of the decay of the light with distance (reach).\nDocumentation: https://doc.babylonjs.com/babylon101/lights",
+    "family": "lights",
+    "name": "SpotLight"
+  },
+  "Sprite": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "manager",
+        "type": "ISpriteManager"
+      }
+    ],
+    "comment": "Class used to represent a sprite",
+    "family": "materials",
+    "name": "Sprite"
+  },
+  "SpriteManager": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "imgUrl",
+        "type": "string"
+      },
+      {
+        "name": "capacity",
+        "type": "number"
+      },
+      {
+        "name": "cellSize",
+        "type": "any"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "epsilon",
+        "type": "number"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      }
+    ],
+    "comment": "Class used to manage multiple sprites on the same spritesheet",
+    "family": "materials",
+    "name": "SpriteManager"
+  },
+  "SpriteSceneComponent": {
+    "args": [
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Defines the sprite scene component responsible to manage sprites\nin a given scene.",
+    "family": "materials",
+    "name": "SpriteSceneComponent"
+  },
+  "StandardMaterial": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "This is the default material used in Babylon. It is the best trade off between quality\nand performances.",
+    "family": "materials",
+    "name": "StandardMaterial"
+  },
+  "StereoscopicArcRotateCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "alpha",
+        "type": "number"
+      },
+      {
+        "name": "beta",
+        "type": "number"
+      },
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "target",
+        "type": "Vector3"
+      },
+      {
+        "name": "interaxialDistance",
+        "type": "number"
+      },
+      {
+        "name": "isStereoscopicSideBySide",
+        "type": "boolean"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Camera used to simulate stereoscopic rendering (based on ArcRotateCamera)",
+    "family": "cameras",
+    "name": "StereoscopicArcRotateCamera"
+  },
+  "StereoscopicFreeCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "interaxialDistance",
+        "type": "number"
+      },
+      {
+        "name": "isStereoscopicSideBySide",
+        "type": "boolean"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Camera used to simulate stereoscopic rendering (based on FreeCamera)",
+    "family": "cameras",
+    "name": "StereoscopicFreeCamera"
+  },
+  "StereoscopicGamepadCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "interaxialDistance",
+        "type": "number"
+      },
+      {
+        "name": "isStereoscopicSideBySide",
+        "type": "boolean"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Camera used to simulate stereoscopic rendering (based on GamepadCamera)",
+    "family": "cameras",
+    "name": "StereoscopicGamepadCamera"
+  },
+  "StereoscopicUniversalCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "interaxialDistance",
+        "type": "number"
+      },
+      {
+        "name": "isStereoscopicSideBySide",
+        "type": "boolean"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Camera used to simulate stereoscopic rendering (based on UniversalCamera)",
+    "family": "cameras",
+    "name": "StereoscopicUniversalCamera"
+  },
+  "TargetCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "setActiveOnSceneIfNoneActive",
+        "type": "boolean"
+      }
+    ],
+    "comment": "A target camera takes a mesh or position as a target and continues to look at it while it moves.\nThis is the base of the follow, arc rotate cameras and Free camera",
+    "family": "cameras",
+    "name": "TargetCamera"
+  },
+  "Texture": {
+    "args": [
+      {
+        "name": "url",
+        "type": "Nullable"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "noMipmap",
+        "type": "boolean"
+      },
+      {
+        "name": "invertY",
+        "type": "boolean"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "onLoad",
+        "type": "Nullable"
+      },
+      {
+        "name": "onError",
+        "type": "Nullable"
+      },
+      {
+        "name": "buffer",
+        "type": "Nullable"
+      },
+      {
+        "name": "deleteBuffer",
+        "type": "boolean"
+      },
+      {
+        "name": "format",
+        "type": "number"
+      }
+    ],
+    "comment": "This represents a texture in babylon. It can be easily loaded from a network, base64 or html input.",
+    "family": "materials",
+    "name": "Texture"
+  },
+  "TextureAssetTask": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "noMipmap",
+        "type": "union"
+      },
+      {
+        "name": "invertY",
+        "type": "union"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      }
+    ],
+    "comment": "Define a task used by AssetsManager to load 2D textures",
+    "family": "materials",
+    "name": "TextureAssetTask"
+  },
+  "TextureOptimization": {
+    "args": [
+      {
+        "name": "priority",
+        "type": "number"
+      },
+      {
+        "name": "maximumSize",
+        "type": "number"
+      },
+      {
+        "name": "step",
+        "type": "number"
+      }
+    ],
+    "comment": "Defines an optimization used to reduce the size of render target textures",
+    "family": "materials",
+    "name": "TextureOptimization"
+  },
+  "TextureTools": {
+    "args": [],
+    "comment": "Class used to host texture specific utilities",
+    "family": "materials",
+    "name": "TextureTools"
+  },
+  "TiledGround": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a tiled ground mesh\n* The parameters `xmin` and `xmax` (floats, default -1 and 1) set the ground minimum and maximum X coordinates\n* The parameters `zmin` and `zmax` (floats, default -1 and 1) set the ground minimum and maximum Z coordinates\n* The parameter `subdivisions` is a javascript object `{w: positive integer, h: positive integer}` (default `{w: 6, h: 6}`). `w` and `h` are the numbers of subdivisions on the ground width and height. Each subdivision is called a tile\n* The parameter `precision` is a javascript object `{w: positive integer, h: positive integer}` (default `{w: 2, h: 2}`). `w` and `h` are the numbers of subdivisions on the ground width and height of each tile\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.",
+    "family": "meshes",
+    "name": "TiledGround",
+    "options": [
+      {
+        "name": "xmin",
+        "type": "number"
+      },
+      {
+        "name": "zmin",
+        "type": "number"
+      },
+      {
+        "name": "xmax",
+        "type": "number"
+      },
+      {
+        "name": "zmax",
+        "type": "number"
+      },
+      {
+        "name": "subdivisions",
+        "type": "literal"
+      },
+      {
+        "name": "precision",
+        "type": "literal"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "Torus": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a torus mesh\n* The parameter `diameter` sets the diameter size (float) of the torus (default 1)\n* The parameter `thickness` sets the diameter size of the tube of the torus (float, default 0.5)\n* The parameter `tessellation` sets the number of torus sides (postive integer, default 16)\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.",
+    "family": "meshes",
+    "name": "Torus",
+    "options": [
+      {
+        "name": "diameter",
+        "type": "number"
+      },
+      {
+        "name": "thickness",
+        "type": "number"
+      },
+      {
+        "name": "tessellation",
+        "type": "number"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "TorusKnot": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a torus knot mesh\n* The parameter `radius` sets the global radius size (float) of the torus knot (default 2)\n* The parameter `radialSegments` sets the number of sides on each tube segments (positive integer, default 32)\n* The parameter `tubularSegments` sets the number of tubes to decompose the knot into (positive integer, default 32)\n* The parameters `p` and `q` are the number of windings on each axis (positive integers, default 2 and 3)\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.",
+    "family": "meshes",
+    "name": "TorusKnot",
+    "options": [
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "tube",
+        "type": "number"
+      },
+      {
+        "name": "radialSegments",
+        "type": "number"
+      },
+      {
+        "name": "tubularSegments",
+        "type": "number"
+      },
+      {
+        "name": "p",
+        "type": "number"
+      },
+      {
+        "name": "q",
+        "type": "number"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "TouchCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "This represents a FPS type of camera controlled by touch.\nThis is like a universal camera minus the Gamepad controls.",
+    "family": "cameras",
+    "name": "TouchCamera"
+  },
+  "Tube": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Creates a tube mesh.\nThe tube is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters\n* The parameter `path` is a required array of successive Vector3. It is the curve used as the axis of the tube\n* The parameter `radius` (positive float, default 1) sets the tube radius size\n* The parameter `tessellation` (positive float, default 64) is the number of sides on the tubular surface\n* The parameter `radiusFunction` (javascript function, default null) is a vanilla javascript function. If it is not null, it overwrittes the parameter `radius`\n* This function is called on each point of the tube path and is passed the index `i` of the i-th point and the distance of this point from the first point of the path. It must return a radius value (positive float)\n* The parameter `arc` (positive float, maximum 1, default 1) is the ratio to apply to the tube circumference : 2 x PI x arc\n* The parameter `cap` sets the way the extruded shape is capped. Possible values : BABYLON.Mesh.NO_CAP (default), BABYLON.Mesh.CAP_START, BABYLON.Mesh.CAP_END, BABYLON.Mesh.CAP_ALL\n* The optional parameter `instance` is an instance of an existing Tube object to be updated with the passed `pathArray` parameter : http://doc.babylonjs.com/tutorials/How_to_dynamically_morph_a_mesh#tube\n* You can also set the mesh side orientation with the values : BABYLON.Mesh.FRONTSIDE (default), BABYLON.Mesh.BACKSIDE or BABYLON.Mesh.DOUBLESIDE\n* If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation\n* The optional parameter `invertUV` (boolean, default false) swaps in the geometry the U and V coordinates to apply a texture\n* The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created",
+    "family": "meshes",
+    "name": "Tube",
+    "options": [
+      {
+        "name": "path",
+        "type": [
+          "Vector3"
+        ]
+      },
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "tessellation",
+        "type": "number"
+      },
+      {
+        "name": "radiusFunction",
+        "type": "literal"
+      },
+      {
+        "name": "cap",
+        "type": "number"
+      },
+      {
+        "name": "arc",
+        "type": "number"
+      },
+      {
+        "name": "updatable",
+        "type": "boolean"
+      },
+      {
+        "name": "sideOrientation",
+        "type": "number"
+      },
+      {
+        "name": "frontUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "backUVs",
+        "type": "Vector4"
+      },
+      {
+        "name": "instance",
+        "type": "Mesh"
+      },
+      {
+        "name": "invertUV",
+        "type": "boolean"
+      }
+    ],
+    "return": "Mesh"
+  },
+  "UniversalCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "The Universal Camera is the one to choose for first person shooter type games, and works with all the keyboard, mouse, touch and gamepads. This replaces the earlier Free Camera,\nwhich still works and will still be found in many Playgrounds.",
+    "family": "cameras",
+    "name": "UniversalCamera"
+  },
+  "VRCameraMetrics": {
+    "args": [],
+    "comment": "This represents all the required metrics to create a VR camera.",
+    "family": "cameras",
+    "name": "VRCameraMetrics"
+  },
+  "VRDeviceOrientationArcRotateCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "alpha",
+        "type": "number"
+      },
+      {
+        "name": "beta",
+        "type": "number"
+      },
+      {
+        "name": "radius",
+        "type": "number"
+      },
+      {
+        "name": "target",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "compensateDistortion",
+        "type": "boolean"
+      },
+      {
+        "name": "vrCameraMetrics",
+        "type": "VRCameraMetrics"
+      }
+    ],
+    "comment": "Camera used to simulate VR rendering (based on ArcRotateCamera)",
+    "family": "cameras",
+    "name": "VRDeviceOrientationArcRotateCamera"
+  },
+  "VRDeviceOrientationFreeCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "compensateDistortion",
+        "type": "boolean"
+      },
+      {
+        "name": "vrCameraMetrics",
+        "type": "VRCameraMetrics"
+      }
+    ],
+    "comment": "Camera used to simulate VR rendering (based on FreeCamera)",
+    "family": "cameras",
+    "name": "VRDeviceOrientationFreeCamera"
+  },
+  "VRDeviceOrientationGamepadCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "compensateDistortion",
+        "type": "boolean"
+      },
+      {
+        "name": "vrCameraMetrics",
+        "type": "VRCameraMetrics"
+      }
+    ],
+    "comment": "Camera used to simulate VR rendering (based on VRDeviceOrientationFreeCamera)",
+    "family": "cameras",
+    "name": "VRDeviceOrientationGamepadCamera"
+  },
+  "VideoTexture": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "src",
+        "type": "union"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "generateMipMaps",
+        "type": "boolean"
+      },
+      {
+        "name": "invertY",
+        "type": "boolean"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "settings",
+        "type": "VideoTextureSettings"
+      }
+    ],
+    "comment": "If you want to display a video in your scene, this is the special texture for that.\nThis special texture works similar to other textures, with the exception of a few parameters.",
+    "family": "materials",
+    "name": "VideoTexture"
+  },
+  "VirtualJoysticksCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "This represents a free type of camera. It can be usefull in First Person Shooter game for instance.\nIt is identical to the Free Camera and simply adds by default a virtual joystick.\nVirtual Joysticks are on-screen 2D graphics that are used to control the camera or other scene items.",
+    "family": "cameras",
+    "name": "VirtualJoysticksCamera"
+  },
+  "VolumetricLightScatteringPostProcess": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "ratio",
+        "type": "any"
+      },
+      {
+        "name": "camera",
+        "type": "Camera"
+      },
+      {
+        "name": "mesh",
+        "type": "Mesh"
+      },
+      {
+        "name": "samples",
+        "type": "number"
+      },
+      {
+        "name": "samplingMode",
+        "type": "number"
+      },
+      {
+        "name": "engine",
+        "type": "Engine"
+      },
+      {
+        "name": "reusable",
+        "type": "boolean"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      }
+    ],
+    "comment": "Inspired by http://http.developer.nvidia.com/GPUGems3/gpugems3_ch13.html",
+    "family": "lights",
+    "name": "VolumetricLightScatteringPostProcess"
+  },
+  "WebVRFreeCamera": {
+    "args": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "position",
+        "type": "Vector3"
+      },
+      {
+        "name": "scene",
+        "type": "Scene"
+      },
+      {
+        "name": "webVROptions",
+        "type": "WebVROptions"
+      }
+    ],
+    "comment": "This represents a WebVR camera.\nThe WebVR camera is Babylon's simple interface to interaction with Windows Mixed Reality, HTC Vive and Oculus Rift.",
+    "family": "cameras",
+    "name": "WebVRFreeCamera"
+  }
+}

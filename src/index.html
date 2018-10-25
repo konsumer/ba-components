@@ -1,21 +1,41 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>ba-components</title>
-  <script src="/build/ba-components.js"></script>
+<!-- this is the demo for ba-components -->
+<title>ba-components</title>
 
-</head>
-<body>
-  <ba-engine>
-<!--     <ba-scene clearColor="black">
-      <ba-hemispheric-light direction='up' />
-      <ba-sphere name='player'>
-        <ba-material diffuseColor="tomato" />
-      </ba-sphere>
-      <ba-follow-camera name='camera' lookAt='player' heightOffset='4' cameraAcceleration='0.05' maxCameraSpeed='100' />
-    </ba-scene> -->
-  </ba-engine>
-</body>
-</html>
+<style>
+  /* totally optional CSS, to set the scene */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: #000;
+    color: #fff;
+  }
+</style>
+
+<script src="./index.js"></script>
+
+<!-- Here is the demo: -->
+
+<ba-engine>
+  <ba-scene clearColor='black'>
+    <ba-hemispheric-light direction="up"></ba-hemispheric-light>
+    
+    <ba-sphere name='player' radius='200'>
+      <ba-standard-material diffuseColor='tomato'></ba-standard-material>
+    </ba-sphere>
+    
+    <ba-follow-camera
+      lockedTarget='player'
+      heightOffset='4'
+      cameraAcceleration='0.05'
+      maxCameraSpeed='100'
+    ></ba-follow-camera
+  </ba-scene>
+</ba-engine>
