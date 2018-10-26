@@ -9,14 +9,13 @@ import { getPosition } from '../utils'
 // an arc rotate version arcFollowCamera are available.
 export class BaFollowCamera extends Component {
   family = 'cameras'
-  acceptedProps = ['name', 'x', 'y', 'z', 'lockedTarget']
+  acceptedProps = ['name', 'x', 'y', 'z']
 
   render () {
     const { scene } = this.context
-    const { name, x, y, z, lockedTarget } = this.props
-    const baRlockedTarget = scene.getNodeByName(lockedTarget)
+    const { name, x, y, z } = this.props
     const position = getPosition(x, y, z)
-    this.ba = new BABYLON.FollowCamera(name, position, scene, baRlockedTarget)
+    this.ba = new BABYLON.FollowCamera(name, position, scene)
   }
 }
 

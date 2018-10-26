@@ -6,14 +6,12 @@ import Component from '../Component'
 // Raw cube texture where the raw buffers are passed in
 export class BaRawCubeTexture extends Component {
   family = 'materials'
-  acceptedProps = ['data', 'size', 'format', 'type', 'generateMipMaps', 'invertY', 'samplingMode', 'compression']
+  acceptedProps = ['size', 'format', 'type', 'generateMipMaps', 'invertY', 'samplingMode']
 
   render () {
     const { scene } = this.context
-    const { data, size, format, type, generateMipMaps, invertY, samplingMode, compression } = this.props
-    const baRdata = scene.getNodeByName(data)
-    const baRcompression = scene.getNodeByName(compression)
-    this.ba = new BABYLON.RawCubeTexture(scene, baRdata, size, format, type, generateMipMaps, invertY, samplingMode, baRcompression)
+    const { size, format, type, generateMipMaps, invertY, samplingMode } = this.props
+    this.ba = new BABYLON.RawCubeTexture(scene, size, format, type, generateMipMaps, invertY, samplingMode)
   }
 }
 

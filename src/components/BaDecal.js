@@ -11,13 +11,11 @@ import Component from '../Component'
 // The parameter `angle` (float in radian, default 0) sets the angle to rotate the decal
 export class BaDecal extends Component {
   family = 'meshes'
-  acceptedProps = ['name', 'sourceMesh']
+  acceptedProps = ['name']
 
   render () {
-    const { scene } = this.context
-    const { name, sourceMesh } = this.props
-    const baRsourceMesh = scene.getNodeByName(sourceMesh)
-    this.ba = BABYLON.MeshBuilder.CreateDecal(name, baRsourceMesh)
+    const { name } = this.props
+    this.ba = BABYLON.MeshBuilder.CreateDecal(name)
   }
 }
 

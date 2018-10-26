@@ -6,13 +6,11 @@ import Component from '../Component'
 // The action to be carried out following a trigger
 export class BaAction extends Component {
   family = 'actions'
-  acceptedProps = ['triggerOptions', 'condition']
+  acceptedProps = ['triggerOptions']
 
   render () {
-    const { scene } = this.context
-    const { triggerOptions, condition } = this.props
-    const baRcondition = scene.getNodeByName(condition)
-    this.ba = new BABYLON.Action(triggerOptions, baRcondition)
+    const { triggerOptions } = this.props
+    this.ba = new BABYLON.Action(triggerOptions)
   }
 }
 

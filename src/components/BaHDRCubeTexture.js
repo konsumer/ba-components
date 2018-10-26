@@ -14,9 +14,7 @@ export class BaHDRCubeTexture extends Component {
   render () {
     const { scene } = this.context
     const { url, size, noMipmap, generateHarmonics, gammaSpace, reserved, onLoad, onError } = this.props
-    const baRonLoad = scene.getNodeByName(onLoad)
-    const baRonError = scene.getNodeByName(onError)
-    this.ba = new BABYLON.HDRCubeTexture(url, scene, size, noMipmap, generateHarmonics, gammaSpace, reserved, baRonLoad, baRonError)
+    this.ba = new BABYLON.HDRCubeTexture(url, scene, size, noMipmap, generateHarmonics, gammaSpace, reserved, onLoad, onError)
   }
 }
 

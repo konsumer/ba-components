@@ -7,13 +7,12 @@ import Component from '../Component'
 // This is the base class of any Procedural texture and contains most of the shareable code.
 export class BaProceduralTexture extends Component {
   family = 'materials'
-  acceptedProps = ['name', 'size', 'fragment', 'fallbackTexture', 'generateMipMaps', 'isCube']
+  acceptedProps = ['name', 'size', 'fragment', 'generateMipMaps', 'isCube']
 
   render () {
     const { scene } = this.context
-    const { name, size, fragment, fallbackTexture, generateMipMaps, isCube } = this.props
-    const baRfallbackTexture = scene.getNodeByName(fallbackTexture)
-    this.ba = new BABYLON.ProceduralTexture(name, size, fragment, scene, baRfallbackTexture, generateMipMaps, isCube)
+    const { name, size, fragment, generateMipMaps, isCube } = this.props
+    this.ba = new BABYLON.ProceduralTexture(name, size, fragment, scene, generateMipMaps, isCube)
   }
 }
 

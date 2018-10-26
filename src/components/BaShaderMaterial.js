@@ -8,13 +8,12 @@ import Component from '../Component'
 // This returned material effects how the mesh will look based on the code in the shaders.
 export class BaShaderMaterial extends Component {
   family = 'materials'
-  acceptedProps = ['name', 'shaderPath', 'options']
+  acceptedProps = ['name', 'shaderPath']
 
   render () {
     const { scene } = this.context
-    const { name, shaderPath, options } = this.props
-    const baRoptions = scene.getNodeByName(options)
-    this.ba = new BABYLON.ShaderMaterial(name, scene, shaderPath, baRoptions)
+    const { name, shaderPath } = this.props
+    this.ba = new BABYLON.ShaderMaterial(name, scene, shaderPath)
   }
 }
 

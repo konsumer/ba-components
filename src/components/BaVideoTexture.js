@@ -7,13 +7,12 @@ import Component from '../Component'
 // This special texture works similar to other textures, with the exception of a few parameters.
 export class BaVideoTexture extends Component {
   family = 'materials'
-  acceptedProps = ['name', 'src', 'generateMipMaps', 'invertY', 'samplingMode', 'settings']
+  acceptedProps = ['name', 'src', 'generateMipMaps', 'invertY', 'samplingMode']
 
   render () {
     const { scene } = this.context
-    const { name, src, generateMipMaps, invertY, samplingMode, settings } = this.props
-    const baRsettings = scene.getNodeByName(settings)
-    this.ba = new BABYLON.VideoTexture(name, src, scene, generateMipMaps, invertY, samplingMode, baRsettings)
+    const { name, src, generateMipMaps, invertY, samplingMode } = this.props
+    this.ba = new BABYLON.VideoTexture(name, src, scene, generateMipMaps, invertY, samplingMode)
   }
 }
 

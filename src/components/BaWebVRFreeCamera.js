@@ -9,14 +9,13 @@ import { getPosition } from '../utils'
 // The WebVR camera is Babylon's simple interface to interaction with Windows Mixed Reality, HTC Vive and Oculus Rift.
 export class BaWebVRFreeCamera extends Component {
   family = 'cameras'
-  acceptedProps = ['name', 'x', 'y', 'z', 'webVROptions']
+  acceptedProps = ['name', 'x', 'y', 'z']
 
   render () {
     const { scene } = this.context
-    const { name, x, y, z, webVROptions } = this.props
-    const baRwebVROptions = scene.getNodeByName(webVROptions)
+    const { name, x, y, z } = this.props
     const position = getPosition(x, y, z)
-    this.ba = new BABYLON.WebVRFreeCamera(name, position, scene, baRwebVROptions)
+    this.ba = new BABYLON.WebVRFreeCamera(name, position, scene)
   }
 }
 

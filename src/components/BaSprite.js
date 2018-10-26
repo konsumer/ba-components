@@ -6,13 +6,11 @@ import Component from '../Component'
 // Class used to represent a sprite
 export class BaSprite extends Component {
   family = 'materials'
-  acceptedProps = ['name', 'manager']
+  acceptedProps = ['name']
 
   render () {
-    const { scene } = this.context
-    const { name, manager } = this.props
-    const baRmanager = scene.getNodeByName(manager)
-    this.ba = new BABYLON.Sprite(name, baRmanager)
+    const { name } = this.props
+    this.ba = new BABYLON.Sprite(name)
   }
 }
 

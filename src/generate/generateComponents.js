@@ -5,6 +5,7 @@ import { componentFromClass, saveJS } from './utils'
 import classInfo from '../../data/classes.json'
 
 // TODO: use base-classes for families?
+// TODO: use {name}X {name}Y {name}Z for Vector3's?
 
 const md = promisify(mkdir)
 
@@ -58,10 +59,20 @@ templates.components = (component) => {
     } else if (a.name === 'canvasOrContext') {
       args.push('canvas')
     } else if (component.name !== 'Engine' && a.type[0] === a.type[0].toUpperCase()) { // class reference
-      hasReferences = true
-      acceptedProps.push(a.name)
-      args.push(`baR${a.name}`)
-      context.push('scene')
+      if (a.name === 'target' || a.type === 'Camera' || a.type === 'Mesh' || a.type === 'Texture') {
+        hasReferences = true
+        acceptedProps.push(a.name)
+        args.push(`baR${a.name}`)
+        context.push('scene')
+      } else {
+        // handler
+        if (a.name.slice(0, 2) === 'on') {
+          acceptedProps.push(a.name)
+          args.push(a.name)
+        } else {
+          console.log('Unhandled reference:', component.name, a)
+        }
+      }
     } else {
       acceptedProps.push(a.name)
       args.push(a.name)
