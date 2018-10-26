@@ -9,7 +9,7 @@
     "prepublish": "npm run build",
     "build:demo": "parcel build src/index.html",
     "start": "parcel src/index.html",
-    "generate": "babel-node src/generate/analyze.js && babel-node src/generate/generateComponents.js"
+    "generate": "babel-node src/generate/analyze.js && babel-node src/generate/generateComponents.js && babel-node src/generate/generateReact.js"
   },
   "keywords": [],
   "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
