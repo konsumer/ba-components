@@ -11,10 +11,6 @@ export class BaActionEvent extends Component {
   render () {
     const { source, pointerX, pointerY, sourceEvent, additionalData } = this.props
     this.ba = new BABYLON.ActionEvent(source, pointerX, pointerY, sourceEvent, additionalData)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaActionEvent', { props: this.props, context: this.context })
-    }
   }
 }
 

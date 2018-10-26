@@ -146,9 +146,6 @@ export class ${baname} extends Component {
     ${beforeDef.join('\n')}
     this.ba = ${className}(${args})
     ${afterDef.join('\n')}
-    if (process.env.NODE_ENV === 'development'){
-      console.log('${baname}', {props: this.props, context: this.context})
-    }
   }
 }
 

@@ -12,10 +12,6 @@ export class BaMaterial extends Component {
     const { scene } = this.context
     const { name, doNotAdd } = this.props
     this.ba = new BABYLON.Material(name, scene, doNotAdd)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaMaterial', { props: this.props, context: this.context })
-    }
   }
 }
 

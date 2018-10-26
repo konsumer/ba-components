@@ -16,10 +16,6 @@ export class BaDecal extends Component {
   render () {
     const { name } = this.props
     this.ba = BABYLON.MeshBuilder.CreateDecal(name)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaDecal', { props: this.props, context: this.context })
-    }
   }
 }
 

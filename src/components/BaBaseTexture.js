@@ -13,10 +13,6 @@ export class BaBaseTexture extends Component {
   render () {
     const { scene } = this.context
     this.ba = new BABYLON.BaseTexture(scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaBaseTexture', { props: this.props, context: this.context })
-    }
   }
 }
 

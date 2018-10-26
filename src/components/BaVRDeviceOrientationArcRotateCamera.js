@@ -14,9 +14,6 @@ export class BaVRDeviceOrientationArcRotateCamera extends Component {
     const baRtarget = scene.getNodeByName(target)
     this.ba = new BABYLON.VRDeviceOrientationArcRotateCamera(name, alpha, beta, radius, baRtarget, scene, compensateDistortion)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaVRDeviceOrientationArcRotateCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

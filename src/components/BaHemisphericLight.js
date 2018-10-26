@@ -16,10 +16,6 @@ export class BaHemisphericLight extends Component {
     const { name, direction } = this.props
     const dir = getDirection(direction)
     this.ba = new BABYLON.HemisphericLight(name, dir, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaHemisphericLight', { props: this.props, context: this.context })
-    }
   }
 }
 

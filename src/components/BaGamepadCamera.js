@@ -17,9 +17,6 @@ export class BaGamepadCamera extends Component {
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.GamepadCamera(name, position, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaGamepadCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

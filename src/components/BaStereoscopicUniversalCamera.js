@@ -16,9 +16,6 @@ export class BaStereoscopicUniversalCamera extends Component {
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.StereoscopicUniversalCamera(name, position, interaxialDistance, isStereoscopicSideBySide, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaStereoscopicUniversalCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

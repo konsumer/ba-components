@@ -17,10 +17,6 @@ export class BaTiledGround extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = BABYLON.MeshBuilder.CreateTiledGround(name, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaTiledGround', { props: this.props, context: this.context })
-    }
   }
 }
 

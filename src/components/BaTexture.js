@@ -12,10 +12,6 @@ export class BaTexture extends Component {
     const { scene } = this.context
     const { noMipmap, invertY, samplingMode, onLoad, onError, deleteBuffer, format } = this.props
     this.ba = new BABYLON.Texture(scene, noMipmap, invertY, samplingMode, onLoad, onError, deleteBuffer, format)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaTexture', { props: this.props, context: this.context })
-    }
   }
 }
 

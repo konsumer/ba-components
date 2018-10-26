@@ -15,10 +15,6 @@ export class BaMaterialHelper extends Component {
 
   render () {
     this.ba = new BABYLON.MaterialHelper()
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaMaterialHelper', { props: this.props, context: this.context })
-    }
   }
 }
 

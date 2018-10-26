@@ -12,10 +12,6 @@ export class BaKhronosTextureContainer extends Component {
   render () {
     const { arrayBuffer, facesExpected, threeDExpected, textureArrayExpected } = this.props
     this.ba = new BABYLON.KhronosTextureContainer(arrayBuffer, facesExpected, threeDExpected, textureArrayExpected)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaKhronosTextureContainer', { props: this.props, context: this.context })
-    }
   }
 }
 

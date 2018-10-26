@@ -16,10 +16,6 @@ export class BaPBRBaseMaterial extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = new BABYLON.PBRBaseMaterial(name, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaPBRBaseMaterial', { props: this.props, context: this.context })
-    }
   }
 }
 

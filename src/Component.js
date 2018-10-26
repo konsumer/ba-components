@@ -26,6 +26,9 @@ export class Component extends HTMLElement {
       }
     })
     this.render()
+    if (process.env.NODE_ENV === 'development') {
+      console.log(this.constructor.name, { props: this.props, context: this.context })
+    }
   }
 
   // you should override this

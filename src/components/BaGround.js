@@ -15,10 +15,6 @@ export class BaGround extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = BABYLON.MeshBuilder.CreateGround(name, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaGround', { props: this.props, context: this.context })
-    }
   }
 }
 

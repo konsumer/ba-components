@@ -10,10 +10,6 @@ export class BaDepthTextureCreationOptions extends Component {
 
   render () {
     this.ba = new BABYLON.DepthTextureCreationOptions()
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaDepthTextureCreationOptions', { props: this.props, context: this.context })
-    }
   }
 }
 

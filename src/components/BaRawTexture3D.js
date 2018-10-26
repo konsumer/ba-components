@@ -12,10 +12,6 @@ export class BaRawTexture3D extends Component {
     const { scene } = this.context
     const { width, height, depth, format, generateMipMaps, invertY, samplingMode, textureType } = this.props
     this.ba = new BABYLON.RawTexture3D(width, height, depth, format, scene, generateMipMaps, invertY, samplingMode, textureType)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaRawTexture3D', { props: this.props, context: this.context })
-    }
   }
 }
 

@@ -11,10 +11,6 @@ export class BaTextureOptimization extends Component {
   render () {
     const { priority, maximumSize, step } = this.props
     this.ba = new BABYLON.TextureOptimization(priority, maximumSize, step)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaTextureOptimization', { props: this.props, context: this.context })
-    }
   }
 }
 

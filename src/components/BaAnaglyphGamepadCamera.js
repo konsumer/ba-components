@@ -16,9 +16,6 @@ export class BaAnaglyphGamepadCamera extends Component {
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.AnaglyphGamepadCamera(name, position, interaxialDistance, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaAnaglyphGamepadCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

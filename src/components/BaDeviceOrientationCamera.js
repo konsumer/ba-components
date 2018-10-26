@@ -17,9 +17,6 @@ export class BaDeviceOrientationCamera extends Component {
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.DeviceOrientationCamera(name, position, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaDeviceOrientationCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

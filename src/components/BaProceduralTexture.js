@@ -13,10 +13,6 @@ export class BaProceduralTexture extends Component {
     const { scene } = this.context
     const { name, size, fragment, generateMipMaps, isCube } = this.props
     this.ba = new BABYLON.ProceduralTexture(name, size, fragment, scene, generateMipMaps, isCube)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaProceduralTexture', { props: this.props, context: this.context })
-    }
   }
 }
 

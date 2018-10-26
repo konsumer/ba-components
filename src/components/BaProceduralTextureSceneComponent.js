@@ -12,10 +12,6 @@ export class BaProceduralTextureSceneComponent extends Component {
   render () {
     const { scene } = this.context
     this.ba = new BABYLON.ProceduralTextureSceneComponent(scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaProceduralTextureSceneComponent', { props: this.props, context: this.context })
-    }
   }
 }
 

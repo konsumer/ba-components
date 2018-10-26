@@ -15,10 +15,6 @@ export class BaPBRSpecularGlossinessMaterial extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = new BABYLON.PBRSpecularGlossinessMaterial(name, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaPBRSpecularGlossinessMaterial', { props: this.props, context: this.context })
-    }
   }
 }
 

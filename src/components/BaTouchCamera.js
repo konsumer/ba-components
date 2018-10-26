@@ -17,9 +17,6 @@ export class BaTouchCamera extends Component {
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.TouchCamera(name, position, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaTouchCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

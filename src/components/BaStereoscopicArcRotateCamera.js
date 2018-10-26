@@ -14,9 +14,6 @@ export class BaStereoscopicArcRotateCamera extends Component {
     const baRtarget = scene.getNodeByName(target)
     this.ba = new BABYLON.StereoscopicArcRotateCamera(name, alpha, beta, radius, baRtarget, interaxialDistance, isStereoscopicSideBySide, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaStereoscopicArcRotateCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

@@ -12,10 +12,6 @@ export class BaActionManager extends Component {
   render () {
     const { scene } = this.context
     this.ba = new BABYLON.ActionManager(scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaActionManager', { props: this.props, context: this.context })
-    }
   }
 }
 

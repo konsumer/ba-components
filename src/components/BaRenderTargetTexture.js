@@ -14,10 +14,6 @@ export class BaRenderTargetTexture extends Component {
     const { scene } = this.context
     const { name, size, generateMipMaps, doNotChangeAspectRatio, type, isCube, samplingMode, generateDepthBuffer, generateStencilBuffer, isMulti, format } = this.props
     this.ba = new BABYLON.RenderTargetTexture(name, size, scene, generateMipMaps, doNotChangeAspectRatio, type, isCube, samplingMode, generateDepthBuffer, generateStencilBuffer, isMulti, format)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaRenderTargetTexture', { props: this.props, context: this.context })
-    }
   }
 }
 

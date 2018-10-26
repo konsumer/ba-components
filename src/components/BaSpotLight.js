@@ -20,10 +20,6 @@ export class BaSpotLight extends Component {
     const position = getPosition(x, y, z)
     const dir = getDirection(direction)
     this.ba = new BABYLON.SpotLight(name, position, dir, angle, exponent, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaSpotLight', { props: this.props, context: this.context })
-    }
   }
 }
 

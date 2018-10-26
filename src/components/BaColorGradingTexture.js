@@ -17,10 +17,6 @@ export class BaColorGradingTexture extends Component {
     const { scene } = this.context
     const { url } = this.props
     this.ba = new BABYLON.ColorGradingTexture(url, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaColorGradingTexture', { props: this.props, context: this.context })
-    }
   }
 }
 

@@ -12,10 +12,6 @@ export class BaSpriteSceneComponent extends Component {
   render () {
     const { scene } = this.context
     this.ba = new BABYLON.SpriteSceneComponent(scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaSpriteSceneComponent', { props: this.props, context: this.context })
-    }
   }
 }
 

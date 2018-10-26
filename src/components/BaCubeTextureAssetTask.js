@@ -11,10 +11,6 @@ export class BaCubeTextureAssetTask extends Component {
   render () {
     const { name, url, extensions, noMipmap, files } = this.props
     this.ba = new BABYLON.CubeTextureAssetTask(name, url, extensions, noMipmap, files)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaCubeTextureAssetTask', { props: this.props, context: this.context })
-    }
   }
 }
 

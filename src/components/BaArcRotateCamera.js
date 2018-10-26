@@ -17,9 +17,6 @@ export class BaArcRotateCamera extends Component {
     const baRtarget = scene.getNodeByName(target)
     this.ba = new BABYLON.ArcRotateCamera(name, alpha, beta, radius, baRtarget, scene, setActiveOnSceneIfNoneActive)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaArcRotateCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

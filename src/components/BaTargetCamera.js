@@ -17,9 +17,6 @@ export class BaTargetCamera extends Component {
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.TargetCamera(name, position, scene, setActiveOnSceneIfNoneActive)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaTargetCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

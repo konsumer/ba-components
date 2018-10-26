@@ -26,10 +26,6 @@ export class BaRibbon extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = BABYLON.MeshBuilder.CreateRibbon(name, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaRibbon', { props: this.props, context: this.context })
-    }
   }
 }
 

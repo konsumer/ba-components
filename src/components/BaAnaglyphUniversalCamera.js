@@ -16,9 +16,6 @@ export class BaAnaglyphUniversalCamera extends Component {
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.AnaglyphUniversalCamera(name, position, interaxialDistance, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaAnaglyphUniversalCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

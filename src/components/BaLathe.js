@@ -24,10 +24,6 @@ export class BaLathe extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = BABYLON.MeshBuilder.CreateLathe(name, scene)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaLathe', { props: this.props, context: this.context })
-    }
   }
 }
 

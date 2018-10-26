@@ -14,10 +14,6 @@ export class BaShaderMaterial extends Component {
     const { scene } = this.context
     const { name, shaderPath } = this.props
     this.ba = new BABYLON.ShaderMaterial(name, scene, shaderPath)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaShaderMaterial', { props: this.props, context: this.context })
-    }
   }
 }
 

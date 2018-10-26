@@ -17,9 +17,6 @@ export class BaFollowCamera extends Component {
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.FollowCamera(name, position, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaFollowCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

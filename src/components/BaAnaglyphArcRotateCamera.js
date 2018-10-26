@@ -14,9 +14,6 @@ export class BaAnaglyphArcRotateCamera extends Component {
     const baRtarget = scene.getNodeByName(target)
     this.ba = new BABYLON.AnaglyphArcRotateCamera(name, alpha, beta, radius, baRtarget, interaxialDistance, scene)
     this.ba.attachControl(this.context.canvas, true)
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaAnaglyphArcRotateCamera', { props: this.props, context: this.context })
-    }
   }
 }
 

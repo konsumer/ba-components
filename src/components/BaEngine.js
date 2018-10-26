@@ -22,9 +22,6 @@ export class BaEngine extends Component {
         scene.render()
       })
     })
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaEngine', { props: this.props, context: this.context })
-    }
   }
 }
 

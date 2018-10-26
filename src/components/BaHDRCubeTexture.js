@@ -15,10 +15,6 @@ export class BaHDRCubeTexture extends Component {
     const { scene } = this.context
     const { url, size, noMipmap, generateHarmonics, gammaSpace, reserved, onLoad, onError } = this.props
     this.ba = new BABYLON.HDRCubeTexture(url, scene, size, noMipmap, generateHarmonics, gammaSpace, reserved, onLoad, onError)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaHDRCubeTexture', { props: this.props, context: this.context })
-    }
   }
 }
 

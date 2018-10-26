@@ -11,10 +11,6 @@ export class BaHDRCubeTextureAssetTask extends Component {
   render () {
     const { name, url, size, noMipmap, generateHarmonics, gammaSpace, reserved } = this.props
     this.ba = new BABYLON.HDRCubeTextureAssetTask(name, url, size, noMipmap, generateHarmonics, gammaSpace, reserved)
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('BaHDRCubeTextureAssetTask', { props: this.props, context: this.context })
-    }
   }
 }
 
