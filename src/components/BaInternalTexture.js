@@ -13,6 +13,10 @@ export class BaInternalTexture extends Component {
     const { engine } = this.context
     const { dataSource } = this.props
     this.ba = new BABYLON.InternalTexture(engine, dataSource)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaInternalTexture', { props: this.props, context: this.context })
+    }
   }
 }
 

@@ -13,6 +13,10 @@ export class BaRefractionTexture extends Component {
     const { scene } = this.context
     const { name, size, generateMipMaps } = this.props
     this.ba = new BABYLON.RefractionTexture(name, size, scene, generateMipMaps)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaRefractionTexture', { props: this.props, context: this.context })
+    }
   }
 }
 

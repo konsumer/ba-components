@@ -10,6 +10,10 @@ export class BaDummyInternalTextureTracker extends Component {
 
   render () {
     this.ba = new BABYLON.DummyInternalTextureTracker()
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaDummyInternalTextureTracker', { props: this.props, context: this.context })
+    }
   }
 }
 

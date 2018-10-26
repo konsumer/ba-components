@@ -11,6 +11,10 @@ export class BaTextureAssetTask extends Component {
   render () {
     const { name, url, noMipmap, invertY, samplingMode } = this.props
     this.ba = new BABYLON.TextureAssetTask(name, url, noMipmap, invertY, samplingMode)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaTextureAssetTask', { props: this.props, context: this.context })
+    }
   }
 }
 

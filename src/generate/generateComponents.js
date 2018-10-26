@@ -119,6 +119,15 @@ templates.components = (component) => {
     beforeDef.push(`this.shadowRoot.appendChild(canvas)`)
     afterDef.push(`this.contextAdditions.canvas = canvas`)
     afterDef.push(`this.contextAdditions.engine = this.ba`)
+    afterDef.push(`this.ba.runRenderLoop(() => {
+      (this.ba.scenes || []).forEach(scene => {
+        scene.render()
+      })
+    })`)
+  }
+
+  if (component.family === 'cameras') {
+    afterDef.push(`this.ba.attachControl(this.context.canvas, true)`)
   }
 
   if (component.name === 'Scene') {
@@ -137,6 +146,9 @@ export class ${baname} extends Component {
     ${beforeDef.join('\n')}
     this.ba = ${className}(${args})
     ${afterDef.join('\n')}
+    if (process.env.NODE_ENV === 'development'){
+      console.log('${baname}', {props: this.props, context: this.context})
+    }
   }
 }
 

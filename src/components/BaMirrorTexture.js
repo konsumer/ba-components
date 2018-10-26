@@ -15,6 +15,10 @@ export class BaMirrorTexture extends Component {
     const { scene } = this.context
     const { name, size, generateMipMaps, type, samplingMode, generateDepthBuffer } = this.props
     this.ba = new BABYLON.MirrorTexture(name, size, scene, generateMipMaps, type, samplingMode, generateDepthBuffer)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaMirrorTexture', { props: this.props, context: this.context })
+    }
   }
 }
 

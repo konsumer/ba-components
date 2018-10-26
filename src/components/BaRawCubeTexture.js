@@ -12,6 +12,10 @@ export class BaRawCubeTexture extends Component {
     const { scene } = this.context
     const { size, format, type, generateMipMaps, invertY, samplingMode } = this.props
     this.ba = new BABYLON.RawCubeTexture(scene, size, format, type, generateMipMaps, invertY, samplingMode)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaRawCubeTexture', { props: this.props, context: this.context })
+    }
   }
 }
 

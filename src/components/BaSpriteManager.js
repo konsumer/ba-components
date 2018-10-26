@@ -12,6 +12,10 @@ export class BaSpriteManager extends Component {
     const { scene } = this.context
     const { name, imgUrl, capacity, cellSize, epsilon, samplingMode } = this.props
     this.ba = new BABYLON.SpriteManager(name, imgUrl, capacity, cellSize, scene, epsilon, samplingMode)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaSpriteManager', { props: this.props, context: this.context })
+    }
   }
 }
 

@@ -17,6 +17,14 @@ export class BaEngine extends Component {
     this.ba = new BABYLON.Engine(canvas, antialias, options, adaptToDeviceRatio)
     this.contextAdditions.canvas = canvas
     this.contextAdditions.engine = this.ba
+    this.ba.runRenderLoop(() => {
+      (this.ba.scenes || []).forEach(scene => {
+        scene.render()
+      })
+    })
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaEngine', { props: this.props, context: this.context })
+    }
   }
 }
 

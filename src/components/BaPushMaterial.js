@@ -12,6 +12,10 @@ export class BaPushMaterial extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = new BABYLON.PushMaterial(name, scene)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaPushMaterial', { props: this.props, context: this.context })
+    }
   }
 }
 

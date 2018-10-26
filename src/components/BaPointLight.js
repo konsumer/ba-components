@@ -18,6 +18,10 @@ export class BaPointLight extends Component {
     const { name, x, y, z } = this.props
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.PointLight(name, position, scene)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaPointLight', { props: this.props, context: this.context })
+    }
   }
 }
 

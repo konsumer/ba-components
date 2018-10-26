@@ -16,6 +16,10 @@ export class BaFreeCamera extends Component {
     const { name, x, y, z, setActiveOnSceneIfNoneActive } = this.props
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.FreeCamera(name, position, scene, setActiveOnSceneIfNoneActive)
+    this.ba.attachControl(this.context.canvas, true)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaFreeCamera', { props: this.props, context: this.context })
+    }
   }
 }
 

@@ -10,6 +10,10 @@ export class BaTextureTools extends Component {
 
   render () {
     this.ba = new BABYLON.TextureTools()
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaTextureTools', { props: this.props, context: this.context })
+    }
   }
 }
 

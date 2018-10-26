@@ -18,6 +18,10 @@ export class BaDisc extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = BABYLON.MeshBuilder.CreateDisc(name, scene)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaDisc', { props: this.props, context: this.context })
+    }
   }
 }
 

@@ -18,6 +18,10 @@ export class BaDirectionalLight extends Component {
     const { name, direction } = this.props
     const dir = getDirection(direction)
     this.ba = new BABYLON.DirectionalLight(name, dir, scene)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaDirectionalLight', { props: this.props, context: this.context })
+    }
   }
 }
 

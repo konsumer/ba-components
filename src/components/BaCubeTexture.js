@@ -12,6 +12,10 @@ export class BaCubeTexture extends Component {
     const { scene } = this.context
     const { rootUrl, noMipmap, onLoad, onError, format, prefiltered, forcedExtension, createPolynomials, lodScale, lodOffset } = this.props
     this.ba = new BABYLON.CubeTexture(rootUrl, scene, noMipmap, onLoad, onError, format, prefiltered, forcedExtension, createPolynomials, lodScale, lodOffset)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaCubeTexture', { props: this.props, context: this.context })
+    }
   }
 }
 

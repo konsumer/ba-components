@@ -14,6 +14,10 @@ export class BaCustomProceduralTexture extends Component {
     const { name, texturePath, size, fallbackTexture, generateMipMaps } = this.props
     const baRfallbackTexture = scene.getNodeByName(fallbackTexture)
     this.ba = new BABYLON.CustomProceduralTexture(name, texturePath, size, scene, baRfallbackTexture, generateMipMaps)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaCustomProceduralTexture', { props: this.props, context: this.context })
+    }
   }
 }
 

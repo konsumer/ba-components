@@ -12,6 +12,10 @@ export class BaDynamicTexture extends Component {
     const { scene } = this.context
     const { name, options, generateMipMaps, samplingMode, format } = this.props
     this.ba = new BABYLON.DynamicTexture(name, options, scene, generateMipMaps, samplingMode, format)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaDynamicTexture', { props: this.props, context: this.context })
+    }
   }
 }
 

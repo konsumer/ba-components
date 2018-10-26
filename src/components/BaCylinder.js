@@ -31,6 +31,10 @@ export class BaCylinder extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = BABYLON.MeshBuilder.CreateCylinder(name, scene)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaCylinder', { props: this.props, context: this.context })
+    }
   }
 }
 

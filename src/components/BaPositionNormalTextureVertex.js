@@ -14,6 +14,10 @@ export class BaPositionNormalTextureVertex extends Component {
     const { x, y, z } = this.props
     const position = getPosition(x, y, z)
     this.ba = new BABYLON.PositionNormalTextureVertex(position)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaPositionNormalTextureVertex', { props: this.props, context: this.context })
+    }
   }
 }
 

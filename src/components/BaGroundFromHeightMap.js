@@ -21,6 +21,10 @@ export class BaGroundFromHeightMap extends Component {
     const { scene } = this.context
     const { name, url } = this.props
     this.ba = BABYLON.MeshBuilder.CreateGroundFromHeightMap(name, url, scene)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaGroundFromHeightMap', { props: this.props, context: this.context })
+    }
   }
 }
 

@@ -11,6 +11,10 @@ export class BaSprite extends Component {
   render () {
     const { name } = this.props
     this.ba = new BABYLON.Sprite(name)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaSprite', { props: this.props, context: this.context })
+    }
   }
 }
 

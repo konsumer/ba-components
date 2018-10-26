@@ -13,6 +13,10 @@ export class BaVideoTexture extends Component {
     const { scene } = this.context
     const { name, src, generateMipMaps, invertY, samplingMode } = this.props
     this.ba = new BABYLON.VideoTexture(name, src, scene, generateMipMaps, invertY, samplingMode)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaVideoTexture', { props: this.props, context: this.context })
+    }
   }
 }
 

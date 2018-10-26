@@ -23,6 +23,10 @@ export class BaPolyhedron extends Component {
     const { scene } = this.context
     const { name } = this.props
     this.ba = BABYLON.MeshBuilder.CreatePolyhedron(name, scene)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaPolyhedron', { props: this.props, context: this.context })
+    }
   }
 }
 

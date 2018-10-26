@@ -14,6 +14,10 @@ export class BaVolumetricLightScatteringPostProcess extends Component {
     const baRcamera = scene.getNodeByName(camera)
     const baRmesh = scene.getNodeByName(mesh)
     this.ba = new BABYLON.VolumetricLightScatteringPostProcess(name, ratio, baRcamera, baRmesh, samples, samplingMode, engine, reusable, scene)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaVolumetricLightScatteringPostProcess', { props: this.props, context: this.context })
+    }
   }
 }
 

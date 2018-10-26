@@ -10,6 +10,10 @@ export class BaVRCameraMetrics extends Component {
 
   render () {
     this.ba = new BABYLON.VRCameraMetrics()
+    this.ba.attachControl(this.context.canvas, true)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaVRCameraMetrics', { props: this.props, context: this.context })
+    }
   }
 }
 

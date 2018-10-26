@@ -11,6 +11,10 @@ export class BaShadowLight extends Component {
 
   render () {
     this.ba = new BABYLON.ShadowLight()
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaShadowLight', { props: this.props, context: this.context })
+    }
   }
 }
 

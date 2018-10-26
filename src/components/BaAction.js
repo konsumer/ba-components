@@ -11,6 +11,10 @@ export class BaAction extends Component {
   render () {
     const { triggerOptions } = this.props
     this.ba = new BABYLON.Action(triggerOptions)
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log('BaAction', { props: this.props, context: this.context })
+    }
   }
 }
 
