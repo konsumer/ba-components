@@ -1,18 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Class used to manage multiple sprites on the same spritesheet
-export class BaSpriteManager extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'imgUrl', 'capacity', 'cellSize', 'epsilon', 'samplingMode']
-
-  render () {
-    const { scene } = this.context
-    const { name, imgUrl, capacity, cellSize, epsilon, samplingMode } = this.props
-    this.ba = new BABYLON.SpriteManager(name, imgUrl, capacity, cellSize, scene, epsilon, samplingMode)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaSpriteManager = makeComponentClass({ 'name': 'SpriteManager', 'props': [{ 'name': 'name', 'type': 'string' }, { 'name': 'sprites', 'type': ['Sprite'] }, { 'name': 'renderingGroupId', 'type': 'Number' }, { 'name': 'layerMask', 'type': 'Number' }, { 'name': 'fogEnabled', 'type': 'Boolean' }, { 'name': 'isPickable', 'type': 'Boolean' }, { 'name': 'cellWidth', 'type': 'Number' }, { 'name': 'cellHeight', 'type': 'Number' }, { 'name': 'onDisposeObservable', 'type': 'Observable' }, { 'name': 'onDispose', 'type': 'Function' }, { 'name': 'texture', 'type': 'Texture' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'imgUrl', 'type': 'String' }, { 'name': 'capacity', 'type': 'Number' }, { 'name': 'cellSize', 'type': 'Any' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'epsilon', 'type': 'Number' }, { 'name': 'samplingMode', 'type': 'Number' }], 'family': 'materials' })
 window.customElements.define('ba-sprite-manager', BaSpriteManager)

@@ -1,18 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// This represents a texture in babylon. It can be easily loaded from a network, base64 or html input.
-export class BaTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['noMipmap', 'invertY', 'samplingMode', 'onLoad', 'onError', 'deleteBuffer', 'format']
-
-  render () {
-    const { scene } = this.context
-    const { noMipmap, invertY, samplingMode, onLoad, onError, deleteBuffer, format } = this.props
-    this.ba = new BABYLON.Texture(scene, noMipmap, invertY, samplingMode, onLoad, onError, deleteBuffer, format)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaTexture = makeComponentClass({ 'name': 'Texture', 'props': [{ 'name': 'url', 'type': 'Nullable' }, { 'name': 'uOffset', 'type': 'Number' }, { 'name': 'vOffset', 'type': 'Number' }, { 'name': 'uScale', 'type': 'Number' }, { 'name': 'vScale', 'type': 'Number' }, { 'name': 'uAng', 'type': 'Number' }, { 'name': 'vAng', 'type': 'Number' }, { 'name': 'wAng', 'type': 'Number' }, { 'name': 'uRotationCenter', 'type': 'Number' }, { 'name': 'vRotationCenter', 'type': 'Number' }, { 'name': 'wRotationCenter', 'type': 'Number' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'onLoadObservable', 'type': 'Observable' }, { 'name': 'isBlocking', 'type': 'Boolean' }, { 'name': 'samplingMode', 'type': 'Number' }], 'args': [{ 'name': 'url', 'type': 'Nullable' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'invertY', 'type': 'Boolean' }, { 'name': 'samplingMode', 'type': 'Number' }, { 'name': 'onLoad', 'type': 'Nullable' }, { 'name': 'onError', 'type': 'Nullable' }, { 'name': 'buffer', 'type': 'Nullable' }, { 'name': 'deleteBuffer', 'type': 'Boolean' }, { 'name': 'format', 'type': 'Number' }], 'family': 'materials' })
 window.customElements.define('ba-texture', BaTexture)

@@ -1,20 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Camera used to simulate stereoscopic rendering (based on ArcRotateCamera)
-export class BaStereoscopicArcRotateCamera extends Component {
-  family = 'cameras'
-  acceptedProps = ['name', 'alpha', 'beta', 'radius', 'target', 'interaxialDistance', 'isStereoscopicSideBySide']
-
-  render () {
-    const { scene } = this.context
-    const { name, alpha, beta, radius, target, interaxialDistance, isStereoscopicSideBySide } = this.props
-    const baRtarget = scene.getNodeByName(target)
-    this.ba = new BABYLON.StereoscopicArcRotateCamera(name, alpha, beta, radius, baRtarget, interaxialDistance, isStereoscopicSideBySide, scene)
-    this.ba.attachControl(this.context.canvas, true)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaStereoscopicArcRotateCamera = makeComponentClass({ 'name': 'StereoscopicArcRotateCamera', 'props': [], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'alpha', 'type': 'Number' }, { 'name': 'beta', 'type': 'Number' }, { 'name': 'radius', 'type': 'Number' }, { 'name': 'target', 'type': 'Vector3' }, { 'name': 'interaxialDistance', 'type': 'Number' }, { 'name': 'isStereoscopicSideBySide', 'type': 'Boolean' }, { 'name': 'scene', 'type': 'Scene' }], 'family': 'cameras' })
 window.customElements.define('ba-stereoscopic-arc-rotate-camera', BaStereoscopicArcRotateCamera)

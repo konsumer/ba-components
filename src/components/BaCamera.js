@@ -1,22 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-import { getPosition } from '../utils'
-
-// This is the base class of all the camera used in the application.
-export class BaCamera extends Component {
-  family = 'cameras'
-  acceptedProps = ['name', 'x', 'y', 'z', 'setActiveOnSceneIfNoneActive']
-
-  render () {
-    const { scene } = this.context
-    const { name, x, y, z, setActiveOnSceneIfNoneActive } = this.props
-    const position = getPosition(x, y, z)
-    this.ba = new BABYLON.Camera(name, position, scene, setActiveOnSceneIfNoneActive)
-    this.ba.attachControl(this.context.canvas, true)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaCamera = makeComponentClass({ 'name': 'Camera', 'props': [{ 'name': 'inputs', 'type': 'CameraInputsManager' }, { 'name': 'position', 'type': 'Vector3' }, { 'name': 'upVector', 'type': 'Vector3' }, { 'name': 'orthoLeft', 'type': 'Nullable' }, { 'name': 'orthoRight', 'type': 'Nullable' }, { 'name': 'orthoBottom', 'type': 'Nullable' }, { 'name': 'orthoTop', 'type': 'Nullable' }, { 'name': 'fov', 'type': 'Number' }, { 'name': 'minZ', 'type': 'Number' }, { 'name': 'maxZ', 'type': 'Number' }, { 'name': 'inertia', 'type': 'Number' }, { 'name': 'mode', 'type': 'Number' }, { 'name': 'isIntermediate', 'type': 'Boolean' }, { 'name': 'viewport', 'type': 'Viewport' }, { 'name': 'layerMask', 'type': 'Number' }, { 'name': 'fovMode', 'type': 'Number' }, { 'name': 'cameraRigMode', 'type': 'Number' }, { 'name': 'interaxialDistance', 'type': 'Number' }, { 'name': 'isStereoscopicSideBySide', 'type': 'Boolean' }, { 'name': 'customRenderTargets', 'type': ['RenderTargetTexture'] }, { 'name': 'onViewMatrixChangedObservable', 'type': 'Observable' }, { 'name': 'onProjectionMatrixChangedObservable', 'type': 'Observable' }, { 'name': 'onAfterCheckInputsObservable', 'type': 'Observable' }, { 'name': 'onRestoreStateObservable', 'type': 'Observable' }, { 'name': 'globalPosition', 'type': 'Vector3' }, { 'name': 'rigCameras', 'type': ['Camera'] }, { 'name': 'rigPostProcess', 'type': 'Nullable' }, { 'name': 'leftCamera', 'type': 'Nullable' }, { 'name': 'rightCamera', 'type': 'Nullable' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'position', 'type': 'Vector3' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'setActiveOnSceneIfNoneActive', 'type': 'Boolean' }], 'family': 'cameras' })
 window.customElements.define('ba-camera', BaCamera)

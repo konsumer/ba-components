@@ -1,17 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Defines an optimization used to reduce the size of render target textures
-export class BaTextureOptimization extends Component {
-  family = 'materials'
-  acceptedProps = ['priority', 'maximumSize', 'step']
-
-  render () {
-    const { priority, maximumSize, step } = this.props
-    this.ba = new BABYLON.TextureOptimization(priority, maximumSize, step)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaTextureOptimization = makeComponentClass({ 'name': 'TextureOptimization', 'props': [{ 'name': 'priority', 'type': 'Number' }, { 'name': 'maximumSize', 'type': 'Number' }, { 'name': 'step', 'type': 'Number' }], 'args': [{ 'name': 'priority', 'type': 'Number' }, { 'name': 'maximumSize', 'type': 'Number' }, { 'name': 'step', 'type': 'Number' }], 'family': 'materials' })
 window.customElements.define('ba-texture-optimization', BaTextureOptimization)

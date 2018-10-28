@@ -1,17 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Define a task used by AssetsManager to load cube textures
-export class BaCubeTextureAssetTask extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'url', 'extensions', 'noMipmap', 'files']
-
-  render () {
-    const { name, url, extensions, noMipmap, files } = this.props
-    this.ba = new BABYLON.CubeTextureAssetTask(name, url, extensions, noMipmap, files)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaCubeTextureAssetTask = makeComponentClass({ 'name': 'CubeTextureAssetTask', 'props': [{ 'name': 'name', 'type': 'string' }, { 'name': 'url', 'type': 'String' }, { 'name': 'extensions', 'type': 'Union' }, { 'name': 'noMipmap', 'type': 'Union' }, { 'name': 'files', 'type': 'Union' }, { 'name': 'texture', 'type': 'CubeTexture' }, { 'name': 'onSuccess', 'type': 'Function' }, { 'name': 'onError', 'type': 'Function' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'url', 'type': 'String' }, { 'name': 'extensions', 'type': 'Union' }, { 'name': 'noMipmap', 'type': 'Union' }, { 'name': 'files', 'type': 'Union' }], 'family': 'materials' })
 window.customElements.define('ba-cube-texture-asset-task', BaCubeTextureAssetTask)

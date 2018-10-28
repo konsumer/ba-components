@@ -1,19 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Class used to store data associated with WebGL texture data for the engine
-// This class should not be used directly
-export class BaInternalTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['dataSource']
-
-  render () {
-    const { engine } = this.context
-    const { dataSource } = this.props
-    this.ba = new BABYLON.InternalTexture(engine, dataSource)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaInternalTexture = makeComponentClass({ 'name': 'InternalTexture', 'props': [{ 'name': 'isReady', 'type': 'Boolean' }, { 'name': 'isCube', 'type': 'Boolean' }, { 'name': 'is3D', 'type': 'Boolean' }, { 'name': 'url', 'type': 'String' }, { 'name': 'samplingMode', 'type': 'Number' }, { 'name': 'generateMipMaps', 'type': 'Boolean' }, { 'name': 'samples', 'type': 'Number' }, { 'name': 'type', 'type': 'Number' }, { 'name': 'format', 'type': 'Number' }, { 'name': 'onLoadedObservable', 'type': 'Observable' }, { 'name': 'width', 'type': 'Number' }, { 'name': 'height', 'type': 'Number' }, { 'name': 'depth', 'type': 'Number' }, { 'name': 'baseWidth', 'type': 'Number' }, { 'name': 'baseHeight', 'type': 'Number' }, { 'name': 'baseDepth', 'type': 'Number' }, { 'name': 'invertY', 'type': 'Boolean' }, { 'name': 'previous', 'type': 'Nullable' }, { 'name': 'next', 'type': 'Nullable' }, { 'name': 'dataSource', 'type': 'Number' }], 'args': [{ 'name': 'engine', 'type': 'Engine' }, { 'name': 'dataSource', 'type': 'Number' }], 'family': 'materials' })
 window.customElements.define('ba-internal-texture', BaInternalTexture)

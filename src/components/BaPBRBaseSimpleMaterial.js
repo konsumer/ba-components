@@ -1,21 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// The Physically based simple base material of BJS.
-//
-// This enables better naming and convention enforcements on top of the pbrMaterial.
-// It is used as the base class for both the specGloss and metalRough conventions.
-export class BaPBRBaseSimpleMaterial extends Component {
-  family = 'materials'
-  acceptedProps = ['name']
-
-  render () {
-    const { scene } = this.context
-    const { name } = this.props
-    this.ba = new BABYLON.PBRBaseSimpleMaterial(name, scene)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaPBRBaseSimpleMaterial = makeComponentClass({ 'name': 'PBRBaseSimpleMaterial', 'props': [{ 'name': 'maxSimultaneousLights', 'type': 'Number' }, { 'name': 'disableLighting', 'type': 'Boolean' }, { 'name': 'environmentTexture', 'type': 'BaseTexture' }, { 'name': 'invertNormalMapX', 'type': 'Boolean' }, { 'name': 'invertNormalMapY', 'type': 'Boolean' }, { 'name': 'normalTexture', 'type': 'BaseTexture' }, { 'name': 'emissiveColor', 'type': 'Color3' }, { 'name': 'emissiveTexture', 'type': 'BaseTexture' }, { 'name': 'occlusionStrength', 'type': 'Number' }, { 'name': 'occlusionTexture', 'type': 'BaseTexture' }, { 'name': 'alphaCutOff', 'type': 'Number' }, { 'name': 'doubleSided', 'type': 'Boolean' }, { 'name': 'lightmapTexture', 'type': 'BaseTexture' }, { 'name': 'useLightmapAsShadowmap', 'type': 'Boolean' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'scene', 'type': 'Scene' }], 'family': 'materials' })
 window.customElements.define('ba-pbr-base-simple-material', BaPBRBaseSimpleMaterial)

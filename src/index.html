@@ -25,17 +25,17 @@
 
 <ba-engine>
   <ba-scene clearColor='black'>
-    <ba-hemispheric-light direction="up"></ba-hemispheric-light>
-    
-    <ba-sphere name='player' radius='200'>
-      <ba-standard-material diffuseColor='tomato'></ba-standard-material>
-    </ba-sphere>
-    
     <ba-follow-camera
       lockedTarget='player'
       heightOffset='4'
       cameraAcceleration='0.05'
       maxCameraSpeed='100'
     ></ba-follow-camera
+
+    <ba-hemispheric-light direction="up"></ba-hemispheric-light>
+    
+    <ba-sphere name='player' radius='200'>
+      <ba-standard-material diffuseColor='tomato'></ba-standard-material>
+    </ba-sphere>
   </ba-scene>
 </ba-engine>

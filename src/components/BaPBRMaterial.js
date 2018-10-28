@@ -1,22 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// The Physically based material of BJS.
-//
-// This offers the main features of a standard PBR material.
-// For more information, please refer to the documentation :
-// http://doc.babylonjs.com/extensions/Physically_Based_Rendering
-export class BaPBRMaterial extends Component {
-  family = 'materials'
-  acceptedProps = ['name']
-
-  render () {
-    const { scene } = this.context
-    const { name } = this.props
-    this.ba = new BABYLON.PBRMaterial(name, scene)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaPBRMaterial = makeComponentClass({ 'name': 'PBRMaterial', 'props': [{ 'name': 'directIntensity', 'type': 'Number' }, { 'name': 'emissiveIntensity', 'type': 'Number' }, { 'name': 'environmentIntensity', 'type': 'Number' }, { 'name': 'specularIntensity', 'type': 'Number' }, { 'name': 'disableBumpMap', 'type': 'Boolean' }, { 'name': 'albedoTexture', 'type': 'BaseTexture' }, { 'name': 'ambientTexture', 'type': 'BaseTexture' }, { 'name': 'ambientTextureStrength', 'type': 'Number' }, { 'name': 'ambientTextureImpactOnAnalyticalLights', 'type': 'Number' }, { 'name': 'opacityTexture', 'type': 'BaseTexture' }, { 'name': 'reflectionTexture', 'type': 'Nullable' }, { 'name': 'emissiveTexture', 'type': 'BaseTexture' }, { 'name': 'reflectivityTexture', 'type': 'BaseTexture' }, { 'name': 'metallicTexture', 'type': 'BaseTexture' }, { 'name': 'metallic', 'type': 'Nullable' }, { 'name': 'roughness', 'type': 'Nullable' }, { 'name': 'microSurfaceTexture', 'type': 'BaseTexture' }, { 'name': 'bumpTexture', 'type': 'BaseTexture' }, { 'name': 'lightmapTexture', 'type': 'BaseTexture' }, { 'name': 'refractionTexture', 'type': 'BaseTexture' }, { 'name': 'ambientColor', 'type': 'Color3' }, { 'name': 'albedoColor', 'type': 'Color3' }, { 'name': 'reflectivityColor', 'type': 'Color3' }, { 'name': 'reflectionColor', 'type': 'Color3' }, { 'name': 'emissiveColor', 'type': 'Color3' }, { 'name': 'microSurface', 'type': 'Number' }, { 'name': 'indexOfRefraction', 'type': 'Number' }, { 'name': 'invertRefractionY', 'type': 'Boolean' }, { 'name': 'linkRefractionWithTransparency', 'type': 'Boolean' }, { 'name': 'useLightmapAsShadowmap', 'type': 'Boolean' }, { 'name': 'useAlphaFromAlbedoTexture', 'type': 'Boolean' }, { 'name': 'forceAlphaTest', 'type': 'Boolean' }, { 'name': 'alphaCutOff', 'type': 'Number' }, { 'name': 'useSpecularOverAlpha', 'type': 'Boolean' }, { 'name': 'useMicroSurfaceFromReflectivityMapAlpha', 'type': 'Boolean' }, { 'name': 'useRoughnessFromMetallicTextureAlpha', 'type': 'Boolean' }, { 'name': 'useRoughnessFromMetallicTextureGreen', 'type': 'Boolean' }, { 'name': 'useMetallnessFromMetallicTextureBlue', 'type': 'Boolean' }, { 'name': 'useAmbientOcclusionFromMetallicTextureRed', 'type': 'Boolean' }, { 'name': 'useAmbientInGrayScale', 'type': 'Boolean' }, { 'name': 'useAutoMicroSurfaceFromReflectivityMap', 'type': 'Boolean' }, { 'name': 'usePhysicalLightFalloff', 'type': 'Boolean' }, { 'name': 'useGLTFLightFalloff', 'type': 'Boolean' }, { 'name': 'useRadianceOverAlpha', 'type': 'Boolean' }, { 'name': 'useObjectSpaceNormalMap', 'type': 'Boolean' }, { 'name': 'useParallax', 'type': 'Boolean' }, { 'name': 'useParallaxOcclusion', 'type': 'Boolean' }, { 'name': 'parallaxScaleBias', 'type': 'Number' }, { 'name': 'disableLighting', 'type': 'Boolean' }, { 'name': 'forceIrradianceInFragment', 'type': 'Boolean' }, { 'name': 'maxSimultaneousLights', 'type': 'Number' }, { 'name': 'invertNormalMapX', 'type': 'Boolean' }, { 'name': 'invertNormalMapY', 'type': 'Boolean' }, { 'name': 'twoSidedLighting', 'type': 'Boolean' }, { 'name': 'useAlphaFresnel', 'type': 'Boolean' }, { 'name': 'useLinearAlphaFresnel', 'type': 'Boolean' }, { 'name': 'environmentBRDFTexture', 'type': 'Nullable' }, { 'name': 'forceNormalForward', 'type': 'Boolean' }, { 'name': 'enableSpecularAntiAliasing', 'type': 'Boolean' }, { 'name': 'useHorizonOcclusion', 'type': 'Boolean' }, { 'name': 'useRadianceOcclusion', 'type': 'Boolean' }, { 'name': 'unlit', 'type': 'Boolean' }, { 'name': 'imageProcessingConfiguration', 'type': 'ImageProcessingConfiguration' }, { 'name': 'cameraColorCurvesEnabled', 'type': 'Boolean' }, { 'name': 'cameraColorGradingEnabled', 'type': 'Boolean' }, { 'name': 'cameraToneMappingEnabled', 'type': 'Boolean' }, { 'name': 'cameraExposure', 'type': 'Number' }, { 'name': 'cameraContrast', 'type': 'Number' }, { 'name': 'cameraColorGradingTexture', 'type': 'Nullable' }, { 'name': 'cameraColorCurves', 'type': 'Nullable' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'scene', 'type': 'Scene' }], 'family': 'materials' })
 window.customElements.define('ba-pbr-material', BaPBRMaterial)

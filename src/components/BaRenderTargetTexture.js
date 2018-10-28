@@ -1,20 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// This Helps creating a texture that will be created from a camera in your scene.
-// It is basically a dynamic texture that could be used to create special effects for instance.
-// Actually, It is the base of lot of effects in the framework like post process, shadows, effect layers and rendering pipelines...
-export class BaRenderTargetTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'size', 'generateMipMaps', 'doNotChangeAspectRatio', 'type', 'isCube', 'samplingMode', 'generateDepthBuffer', 'generateStencilBuffer', 'isMulti', 'format']
-
-  render () {
-    const { scene } = this.context
-    const { name, size, generateMipMaps, doNotChangeAspectRatio, type, isCube, samplingMode, generateDepthBuffer, generateStencilBuffer, isMulti, format } = this.props
-    this.ba = new BABYLON.RenderTargetTexture(name, size, scene, generateMipMaps, doNotChangeAspectRatio, type, isCube, samplingMode, generateDepthBuffer, generateStencilBuffer, isMulti, format)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaRenderTargetTexture = makeComponentClass({ 'name': 'RenderTargetTexture', 'props': [{ 'name': 'isCube', 'type': 'Boolean' }, { 'name': 'renderListPredicate', 'type': 'Function' }, { 'name': 'renderList', 'type': 'Nullable' }, { 'name': 'renderParticles', 'type': 'Boolean' }, { 'name': 'renderSprites', 'type': 'Boolean' }, { 'name': 'coordinatesMode', 'type': 'Number' }, { 'name': 'activeCamera', 'type': 'Nullable' }, { 'name': 'customRenderFunction', 'type': 'Function' }, { 'name': 'useCameraPostProcesses', 'type': 'Boolean' }, { 'name': 'ignoreCameraViewport', 'type': 'Boolean' }, { 'name': 'onBeforeBindObservable', 'type': 'Observable' }, { 'name': 'onAfterUnbindObservable', 'type': 'Observable' }, { 'name': 'onAfterUnbind', 'type': 'Function' }, { 'name': 'onBeforeRenderObservable', 'type': 'Observable' }, { 'name': 'onBeforeRender', 'type': 'Function' }, { 'name': 'onAfterRenderObservable', 'type': 'Observable' }, { 'name': 'onAfterRender', 'type': 'Function' }, { 'name': 'onClearObservable', 'type': 'Observable' }, { 'name': 'onClear', 'type': 'Function' }, { 'name': 'clearColor', 'type': 'Color4' }, { 'name': 'renderTargetOptions', 'type': 'RenderTargetCreationOptions' }, { 'name': 'boundingBoxPosition', 'type': 'Vector3' }, { 'name': 'boundingBoxSize', 'type': 'Vector3' }, { 'name': 'depthStencilTexture', 'type': 'Nullable' }, { 'name': 'samples', 'type': 'Number' }, { 'name': 'refreshRate', 'type': 'Number' }, { 'name': 'canRescale', 'type': 'Boolean' }, { 'name': 'renderToTarget' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'size', 'type': 'Union' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'generateMipMaps', 'type': 'Boolean' }, { 'name': 'doNotChangeAspectRatio', 'type': 'Boolean' }, { 'name': 'type', 'type': 'Number' }, { 'name': 'isCube', 'type': 'Boolean' }, { 'name': 'samplingMode', 'type': 'Number' }, { 'name': 'generateDepthBuffer', 'type': 'Boolean' }, { 'name': 'generateStencilBuffer', 'type': 'Boolean' }, { 'name': 'isMulti', 'type': 'Boolean' }, { 'name': 'format', 'type': 'Number' }], 'family': 'materials' })
 window.customElements.define('ba-render-target-texture', BaRenderTargetTexture)

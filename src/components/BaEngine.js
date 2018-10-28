@@ -1,28 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// The engine class is responsible for interfacing with all lower-level APIs such as WebGL and Audio
-export class BaEngine extends Component {
-  family = 'system'
-  acceptedProps = ['antialias', 'options', 'adaptToDeviceRatio']
-
-  render () {
-    const { antialias, options, adaptToDeviceRatio } = this.props
-    const canvas = document.createElement('canvas')
-    canvas.setAttribute('style', 'height: 100%; width: 100%')
-    this.createShadowRoot()
-    this.shadowRoot.appendChild(canvas)
-    this.ba = new BABYLON.Engine(canvas, antialias, options, adaptToDeviceRatio)
-    this.contextAdditions.canvas = canvas
-    this.contextAdditions.engine = this.ba
-    this.ba.runRenderLoop(() => {
-      (this.ba.scenes || []).forEach(scene => {
-        scene.render()
-      })
-    })
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaEngine = makeComponentClass({ 'name': 'Engine', 'props': [{ 'name': 'forcePOTTextures', 'type': 'Boolean' }, { 'name': 'isFullscreen', 'type': 'Boolean' }, { 'name': 'isPointerLock', 'type': 'Boolean' }, { 'name': 'cullBackFaces', 'type': 'Boolean' }, { 'name': 'renderEvenInBackground', 'type': 'Boolean' }, { 'name': 'preventCacheWipeBetweenFrames', 'type': 'Boolean' }, { 'name': 'enableOfflineSupport', 'type': 'Boolean' }, { 'name': 'disableManifestCheck', 'type': 'Boolean' }, { 'name': 'scenes', 'type': ['Scene'] }, { 'name': 'postProcesses', 'type': ['PostProcess'] }, { 'name': 'validateShaderPrograms', 'type': 'Boolean' }, { 'name': 'onResizeObservable', 'type': 'Observable' }, { 'name': 'onCanvasBlurObservable', 'type': 'Observable' }, { 'name': 'onCanvasFocusObservable', 'type': 'Observable' }, { 'name': 'onCanvasPointerOutObservable', 'type': 'Observable' }, { 'name': 'onBeforeTextureInitObservable', 'type': 'Observable' }, { 'name': 'isInVRExclusivePointerMode', 'type': 'Boolean' }, { 'name': 'disableUniformBuffers', 'type': 'Boolean' }, { 'name': 'supportsUniformBuffers', 'type': 'Boolean' }, { 'name': 'onBeginFrameObservable', 'type': 'Observable' }, { 'name': 'onEndFrameObservable', 'type': 'Observable' }, { 'name': 'onBeforeShaderCompilationObservable', 'type': 'Observable' }, { 'name': 'onAfterShaderCompilationObservable', 'type': 'Observable' }, { 'name': 'needPOTTextures', 'type': 'Boolean' }, { 'name': 'disableTextureBindingOptimization', 'type': 'Boolean' }, { 'name': 'audioEngine', 'type': 'IAudioEngine' }, { 'name': 'onVRDisplayChangedObservable', 'type': 'Observable' }, { 'name': 'onVRRequestPresentComplete', 'type': 'Observable' }, { 'name': 'onVRRequestPresentStart', 'type': 'Observable' }, { 'name': 'onContextLostObservable', 'type': 'Observable' }, { 'name': 'onContextRestoredObservable', 'type': 'Observable' }, { 'name': 'doNotHandleContextLost', 'type': 'Boolean' }, { 'name': 'disablePerformanceMonitorInBackground', 'type': 'Boolean' }, { 'name': 'performanceMonitor', 'type': 'PerformanceMonitor' }, { 'name': 'texturesSupported', 'type': [null] }, { 'name': 'textureFormatInUse', 'type': 'Nullable' }, { 'name': 'currentViewport', 'type': 'Nullable' }, { 'name': 'emptyTexture', 'type': 'InternalTexture' }, { 'name': 'emptyTexture3D', 'type': 'InternalTexture' }, { 'name': 'emptyCubeTexture', 'type': 'InternalTexture' }, { 'name': 'premultipliedAlpha', 'type': 'Boolean' }, { 'name': 'webGLVersion', 'type': 'Number' }, { 'name': 'isStencilEnable', 'type': 'Boolean' }, { 'name': 'drawCalls', 'type': 'Number' }, { 'name': 'drawCallsPerfCounter', 'type': 'Nullable' }, { 'name': 'bindUnboundFramebuffer' }, { 'name': 'bindIndexBuffer' }, { 'name': 'bindBuffer' }, { 'name': 'enableUnpackFlipYCached', 'type': 'Boolean' }, { 'name': 'setProgram' }, { 'name': 'loadingScreen', 'type': 'ILoadingScreen' }, { 'name': 'loadingUIText', 'type': 'String' }, { 'name': 'loadingUIBackgroundColor', 'type': 'String' }], 'args': [{ 'name': 'canvasOrContext', 'type': 'Nullable' }, { 'name': 'antialias', 'type': 'Boolean' }, { 'name': 'options', 'type': 'EngineOptions' }, { 'name': 'adaptToDeviceRatio', 'type': 'Boolean' }], 'family': 'system' })
 window.customElements.define('ba-engine', BaEngine)

@@ -1,16 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Internal class used by the engine to get list of InternalTexture already bound to the GL context
-export class BaDummyInternalTextureTracker extends Component {
-  family = 'materials'
-  acceptedProps = []
-
-  render () {
-    this.ba = new BABYLON.DummyInternalTextureTracker()
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaDummyInternalTextureTracker = makeComponentClass({ 'name': 'DummyInternalTextureTracker', 'props': [{ 'name': 'previous', 'type': 'Nullable' }, { 'name': 'next', 'type': 'Nullable' }], 'args': [], 'family': 'materials' })
 window.customElements.define('ba-dummy-internal-texture-tracker', BaDummyInternalTextureTracker)

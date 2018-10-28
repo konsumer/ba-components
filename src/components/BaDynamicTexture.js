@@ -1,18 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// A class extending Texture allowing drawing on a texture
-export class BaDynamicTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'options', 'generateMipMaps', 'samplingMode', 'format']
-
-  render () {
-    const { scene } = this.context
-    const { name, options, generateMipMaps, samplingMode, format } = this.props
-    this.ba = new BABYLON.DynamicTexture(name, options, scene, generateMipMaps, samplingMode, format)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaDynamicTexture = makeComponentClass({ 'name': 'DynamicTexture', 'props': [{ 'name': 'canRescale', 'type': 'Boolean' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'options', 'type': 'Any' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'generateMipMaps', 'type': 'Boolean' }, { 'name': 'samplingMode', 'type': 'Number' }, { 'name': 'format', 'type': 'Number' }], 'family': 'materials' })
 window.customElements.define('ba-dynamic-texture', BaDynamicTexture)

@@ -1,20 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Inspired by http://http.developer.nvidia.com/GPUGems3/gpugems3_ch13.html
-export class BaVolumetricLightScatteringPostProcess extends Component {
-  family = 'lights'
-  acceptedProps = ['name', 'ratio', 'camera', 'mesh', 'samples', 'samplingMode', 'reusable']
-
-  render () {
-    const { scene, engine } = this.context
-    const { name, ratio, camera, mesh, samples, samplingMode, reusable } = this.props
-    const baRcamera = scene.getNodeByName(camera)
-    const baRmesh = scene.getNodeByName(mesh)
-    this.ba = new BABYLON.VolumetricLightScatteringPostProcess(name, ratio, baRcamera, baRmesh, samples, samplingMode, engine, reusable, scene)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaVolumetricLightScatteringPostProcess = makeComponentClass({ 'name': 'VolumetricLightScatteringPostProcess', 'props': [{ 'name': 'attachedNode', 'type': 'Literal' }, { 'name': 'customMeshPosition', 'type': 'Vector3' }, { 'name': 'useCustomMeshPosition', 'type': 'Boolean' }, { 'name': 'invert', 'type': 'Boolean' }, { 'name': 'mesh', 'type': 'Mesh' }, { 'name': 'useDiffuseColor', 'type': 'Boolean' }, { 'name': 'excludedMeshes', 'type': ['AbstractMesh'] }, { 'name': 'exposure', 'type': 'Number' }, { 'name': 'decay', 'type': 'Number' }, { 'name': 'weight', 'type': 'Number' }, { 'name': 'density', 'type': 'Number' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'ratio', 'type': 'Any' }, { 'name': 'camera', 'type': 'Camera' }, { 'name': 'mesh', 'type': 'Mesh' }, { 'name': 'samples', 'type': 'Number' }, { 'name': 'samplingMode', 'type': 'Number' }, { 'name': 'engine', 'type': 'Engine' }, { 'name': 'reusable', 'type': 'Boolean' }, { 'name': 'scene', 'type': 'Scene' }], 'family': 'lights' })
 window.customElements.define('ba-volumetric-light-scattering-post-process', BaVolumetricLightScatteringPostProcess)

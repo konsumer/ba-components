@@ -1,17 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Define a task used by AssetsManager to load HDR cube textures
-export class BaHDRCubeTextureAssetTask extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'url', 'size', 'noMipmap', 'generateHarmonics', 'gammaSpace', 'reserved']
-
-  render () {
-    const { name, url, size, noMipmap, generateHarmonics, gammaSpace, reserved } = this.props
-    this.ba = new BABYLON.HDRCubeTextureAssetTask(name, url, size, noMipmap, generateHarmonics, gammaSpace, reserved)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaHDRCubeTextureAssetTask = makeComponentClass({ 'name': 'HDRCubeTextureAssetTask', 'props': [{ 'name': 'name', 'type': 'string' }, { 'name': 'url', 'type': 'String' }, { 'name': 'size', 'type': 'Number' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'generateHarmonics', 'type': 'Boolean' }, { 'name': 'gammaSpace', 'type': 'Boolean' }, { 'name': 'reserved', 'type': 'Boolean' }, { 'name': 'texture', 'type': 'HDRCubeTexture' }, { 'name': 'onSuccess', 'type': 'Function' }, { 'name': 'onError', 'type': 'Function' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'url', 'type': 'String' }, { 'name': 'size', 'type': 'Number' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'generateHarmonics', 'type': 'Boolean' }, { 'name': 'gammaSpace', 'type': 'Boolean' }, { 'name': 'reserved', 'type': 'Boolean' }], 'family': 'materials' })
 window.customElements.define('ba-hdr-cube-texture-asset-task', BaHDRCubeTextureAssetTask)

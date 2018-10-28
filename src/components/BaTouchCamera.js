@@ -1,23 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-import { getPosition } from '../utils'
-
-// This represents a FPS type of camera controlled by touch.
-// This is like a universal camera minus the Gamepad controls.
-export class BaTouchCamera extends Component {
-  family = 'cameras'
-  acceptedProps = ['name', 'x', 'y', 'z']
-
-  render () {
-    const { scene } = this.context
-    const { name, x, y, z } = this.props
-    const position = getPosition(x, y, z)
-    this.ba = new BABYLON.TouchCamera(name, position, scene)
-    this.ba.attachControl(this.context.canvas, true)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaTouchCamera = makeComponentClass({ 'name': 'TouchCamera', 'props': [{ 'name': 'touchAngularSensibility', 'type': 'Number' }, { 'name': 'touchMoveSensibility', 'type': 'Number' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'position', 'type': 'Vector3' }, { 'name': 'scene', 'type': 'Scene' }], 'family': 'cameras' })
 window.customElements.define('ba-touch-camera', BaTouchCamera)

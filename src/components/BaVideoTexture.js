@@ -1,19 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// If you want to display a video in your scene, this is the special texture for that.
-// This special texture works similar to other textures, with the exception of a few parameters.
-export class BaVideoTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'src', 'generateMipMaps', 'invertY', 'samplingMode']
-
-  render () {
-    const { scene } = this.context
-    const { name, src, generateMipMaps, invertY, samplingMode } = this.props
-    this.ba = new BABYLON.VideoTexture(name, src, scene, generateMipMaps, invertY, samplingMode)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaVideoTexture = makeComponentClass({ 'name': 'VideoTexture', 'props': [{ 'name': 'autoUpdateTexture', 'type': 'Boolean' }, { 'name': 'video', 'type': 'HTMLVideoElement' }, { 'name': 'onUserActionRequestedObservable', 'type': 'Observable' }, { 'name': 'reset' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'src', 'type': 'Union' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'generateMipMaps', 'type': 'Boolean' }, { 'name': 'invertY', 'type': 'Boolean' }, { 'name': 'samplingMode', 'type': 'Number' }, { 'name': 'settings', 'type': 'VideoTextureSettings' }], 'family': 'materials' })
 window.customElements.define('ba-video-texture', BaVideoTexture)

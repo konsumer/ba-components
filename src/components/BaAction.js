@@ -1,17 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// The action to be carried out following a trigger
-export class BaAction extends Component {
-  family = 'actions'
-  acceptedProps = ['triggerOptions']
-
-  render () {
-    const { triggerOptions } = this.props
-    this.ba = new BABYLON.Action(triggerOptions)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaAction = makeComponentClass({ 'name': 'Action', 'props': [{ 'name': 'triggerOptions', 'type': 'Any' }, { 'name': 'trigger', 'type': 'Number' }, { 'name': 'onBeforeExecuteObservable', 'type': 'Observable' }], 'args': [{ 'name': 'triggerOptions', 'type': 'Any' }, { 'name': 'condition', 'type': 'Condition' }], 'family': 'actions' })
 window.customElements.define('ba-action', BaAction)

@@ -1,20 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-import { getPosition } from '../utils'
-
-// Contains position, normal and uv vectors for a vertex
-export class BaPositionNormalTextureVertex extends Component {
-  family = 'materials'
-  acceptedProps = ['x', 'y', 'z']
-
-  render () {
-    const { x, y, z } = this.props
-    const position = getPosition(x, y, z)
-    this.ba = new BABYLON.PositionNormalTextureVertex(position)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaPositionNormalTextureVertex = makeComponentClass({ 'name': 'PositionNormalTextureVertex', 'props': [{ 'name': 'position', 'type': 'Vector3' }, { 'name': 'normal', 'type': 'Vector3' }, { 'name': 'uv', 'type': 'Vector2' }], 'args': [{ 'name': 'position', 'type': 'Vector3' }, { 'name': 'normal', 'type': 'Vector3' }, { 'name': 'uv', 'type': 'Vector2' }], 'family': 'materials' })
 window.customElements.define('ba-position-normal-texture-vertex', BaPositionNormalTextureVertex)

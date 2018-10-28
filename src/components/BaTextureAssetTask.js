@@ -1,17 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Define a task used by AssetsManager to load 2D textures
-export class BaTextureAssetTask extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'url', 'noMipmap', 'invertY', 'samplingMode']
-
-  render () {
-    const { name, url, noMipmap, invertY, samplingMode } = this.props
-    this.ba = new BABYLON.TextureAssetTask(name, url, noMipmap, invertY, samplingMode)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaTextureAssetTask = makeComponentClass({ 'name': 'TextureAssetTask', 'props': [{ 'name': 'name', 'type': 'string' }, { 'name': 'url', 'type': 'String' }, { 'name': 'noMipmap', 'type': 'Union' }, { 'name': 'invertY', 'type': 'Union' }, { 'name': 'samplingMode', 'type': 'Number' }, { 'name': 'texture', 'type': 'Texture' }, { 'name': 'onSuccess', 'type': 'Function' }, { 'name': 'onError', 'type': 'Function' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'url', 'type': 'String' }, { 'name': 'noMipmap', 'type': 'Union' }, { 'name': 'invertY', 'type': 'Union' }, { 'name': 'samplingMode', 'type': 'Number' }], 'family': 'materials' })
 window.customElements.define('ba-texture-asset-task', BaTextureAssetTask)

@@ -1,18 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Base class for the main features of a material in Babylon.js
-export class BaMaterial extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'doNotAdd']
-
-  render () {
-    const { scene } = this.context
-    const { name, doNotAdd } = this.props
-    this.ba = new BABYLON.Material(name, scene, doNotAdd)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaMaterial = makeComponentClass({ 'name': 'Material', 'props': [{ 'name': 'id', 'type': 'String' }, { 'name': 'uniqueId', 'type': 'Number' }, { 'name': 'name', 'type': 'string' }, { 'name': 'checkReadyOnEveryCall', 'type': 'Boolean' }, { 'name': 'checkReadyOnlyOnce', 'type': 'Boolean' }, { 'name': 'state', 'type': 'String' }, { 'name': 'alpha', 'type': 'Number' }, { 'name': 'backFaceCulling', 'type': 'Boolean' }, { 'name': 'sideOrientation', 'type': 'Number' }, { 'name': 'onCompiled', 'type': 'Function' }, { 'name': 'onError', 'type': 'Function' }, { 'name': 'getRenderTargetTextures', 'type': 'Function' }, { 'name': 'hasRenderTargetTextures', 'type': 'Boolean' }, { 'name': 'doNotSerialize', 'type': 'Boolean' }, { 'name': 'storeEffectOnSubMeshes', 'type': 'Boolean' }, { 'name': 'animations', 'type': [null] }, { 'name': 'onDisposeObservable', 'type': 'Observable' }, { 'name': 'onDispose', 'type': 'Function' }, { 'name': 'onBindObservable', 'type': 'Observable' }, { 'name': 'onBind', 'type': 'Function' }, { 'name': 'onUnBindObservable', 'type': 'Observable' }, { 'name': 'alphaMode', 'type': 'Number' }, { 'name': 'needDepthPrePass', 'type': 'Boolean' }, { 'name': 'disableDepthWrite', 'type': 'Boolean' }, { 'name': 'forceDepthWrite', 'type': 'Boolean' }, { 'name': 'separateCullingPass', 'type': 'Boolean' }, { 'name': 'fogEnabled', 'type': 'Boolean' }, { 'name': 'pointSize', 'type': 'Number' }, { 'name': 'zOffset', 'type': 'Number' }, { 'name': 'wireframe', 'type': 'Boolean' }, { 'name': 'pointsCloud', 'type': 'Boolean' }, { 'name': 'fillMode', 'type': 'Number' }, { 'name': 'isFrozen', 'type': 'Boolean' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'doNotAdd', 'type': 'Boolean' }], 'family': 'materials' })
 window.customElements.define('ba-material', BaMaterial)

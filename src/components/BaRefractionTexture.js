@@ -1,19 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Creates a refraction texture used by refraction channel of the standard material.
-// It is like a mirror but to see through a material.
-export class BaRefractionTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['name', 'size', 'generateMipMaps']
-
-  render () {
-    const { scene } = this.context
-    const { name, size, generateMipMaps } = this.props
-    this.ba = new BABYLON.RefractionTexture(name, size, scene, generateMipMaps)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaRefractionTexture = makeComponentClass({ 'name': 'RefractionTexture', 'props': [{ 'name': 'refractionPlane', 'type': 'Plane' }, { 'name': 'depth', 'type': 'Number' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'size', 'type': 'Number' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'generateMipMaps', 'type': 'Boolean' }], 'family': 'materials' })
 window.customElements.define('ba-refraction-texture', BaRefractionTexture)

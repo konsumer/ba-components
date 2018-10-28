@@ -1,17 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// This represents all the required metrics to create a VR camera.
-export class BaVRCameraMetrics extends Component {
-  family = 'cameras'
-  acceptedProps = []
-
-  render () {
-    this.ba = new BABYLON.VRCameraMetrics()
-    this.ba.attachControl(this.context.canvas, true)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaVRCameraMetrics = makeComponentClass({ 'name': 'VRCameraMetrics', 'props': [{ 'name': 'hResolution', 'type': 'Number' }, { 'name': 'vResolution', 'type': 'Number' }, { 'name': 'hScreenSize', 'type': 'Number' }, { 'name': 'vScreenSize', 'type': 'Number' }, { 'name': 'vScreenCenter', 'type': 'Number' }, { 'name': 'eyeToScreenDistance', 'type': 'Number' }, { 'name': 'lensSeparationDistance', 'type': 'Number' }, { 'name': 'interpupillaryDistance', 'type': 'Number' }, { 'name': 'distortionK', 'type': ['Number'] }, { 'name': 'chromaAbCorrection', 'type': ['Number'] }, { 'name': 'postProcessScaleFactor', 'type': 'Number' }, { 'name': 'lensCenterOffset', 'type': 'Number' }, { 'name': 'compensateDistortion', 'type': 'Boolean' }, { 'name': 'aspectRatio', 'type': 'Number' }, { 'name': 'aspectRatioFov', 'type': 'Number' }, { 'name': 'leftHMatrix', 'type': 'Matrix' }, { 'name': 'rightHMatrix', 'type': 'Matrix' }, { 'name': 'leftPreViewMatrix', 'type': 'Matrix' }, { 'name': 'rightPreViewMatrix', 'type': 'Matrix' }], 'args': [], 'family': 'cameras' })
 window.customElements.define('ba-vr-camera-metrics', BaVRCameraMetrics)

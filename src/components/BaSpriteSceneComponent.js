@@ -1,18 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Defines the sprite scene component responsible to manage sprites
-// in a given scene.
-export class BaSpriteSceneComponent extends Component {
-  family = 'materials'
-  acceptedProps = []
-
-  render () {
-    const { scene } = this.context
-    this.ba = new BABYLON.SpriteSceneComponent(scene)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaSpriteSceneComponent = makeComponentClass({ 'name': 'SpriteSceneComponent', 'props': [{ 'name': 'name', 'type': 'string' }, { 'name': 'scene', 'type': 'Scene' }], 'args': [{ 'name': 'scene', 'type': 'Scene' }], 'family': 'materials' })
 window.customElements.define('ba-sprite-scene-component', BaSpriteSceneComponent)

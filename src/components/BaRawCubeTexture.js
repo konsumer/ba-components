@@ -1,18 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Raw cube texture where the raw buffers are passed in
-export class BaRawCubeTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['size', 'format', 'type', 'generateMipMaps', 'invertY', 'samplingMode']
-
-  render () {
-    const { scene } = this.context
-    const { size, format, type, generateMipMaps, invertY, samplingMode } = this.props
-    this.ba = new BABYLON.RawCubeTexture(scene, size, format, type, generateMipMaps, invertY, samplingMode)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaRawCubeTexture = makeComponentClass({ 'name': 'RawCubeTexture', 'props': [], 'args': [{ 'name': 'scene', 'type': 'Scene' }, { 'name': 'data', 'type': 'Nullable' }, { 'name': 'size', 'type': 'Number' }, { 'name': 'format', 'type': 'Number' }, { 'name': 'type', 'type': 'Number' }, { 'name': 'generateMipMaps', 'type': 'Boolean' }, { 'name': 'invertY', 'type': 'Boolean' }, { 'name': 'samplingMode', 'type': 'Number' }, { 'name': 'compression', 'type': 'Nullable' }], 'family': 'materials' })
 window.customElements.define('ba-raw-cube-texture', BaRawCubeTexture)

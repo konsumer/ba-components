@@ -1,21 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// This represents a texture coming from an HDR input.
-//
-// The only supported format is currently panorama picture stored in RGBE format.
-// Example of such files can be found on HDRLib: http://hdrlib.com/
-export class BaHDRCubeTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['url', 'size', 'noMipmap', 'generateHarmonics', 'gammaSpace', 'reserved', 'onLoad', 'onError']
-
-  render () {
-    const { scene } = this.context
-    const { url, size, noMipmap, generateHarmonics, gammaSpace, reserved, onLoad, onError } = this.props
-    this.ba = new BABYLON.HDRCubeTexture(url, scene, size, noMipmap, generateHarmonics, gammaSpace, reserved, onLoad, onError)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaHDRCubeTexture = makeComponentClass({ 'name': 'HDRCubeTexture', 'props': [{ 'name': 'url', 'type': 'String' }, { 'name': 'coordinatesMode', 'type': 'Number' }, { 'name': 'isBlocking', 'type': 'Boolean' }, { 'name': 'rotationY', 'type': 'Number' }, { 'name': 'boundingBoxPosition', 'type': 'Vector3' }, { 'name': 'boundingBoxSize', 'type': 'Vector3' }, { 'name': 'loadTexture' }], 'args': [{ 'name': 'url', 'type': 'String' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'size', 'type': 'Number' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'generateHarmonics', 'type': 'Boolean' }, { 'name': 'gammaSpace', 'type': 'Boolean' }, { 'name': 'reserved', 'type': 'Boolean' }, { 'name': 'onLoad', 'type': 'Nullable' }, { 'name': 'onError', 'type': 'Nullable' }], 'family': 'materials' })
 window.customElements.define('ba-hdr-cube-texture', BaHDRCubeTexture)

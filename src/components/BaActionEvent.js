@@ -1,17 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// ActionEvent is the event being sent when an action is triggered.
-export class BaActionEvent extends Component {
-  family = 'actions'
-  acceptedProps = ['source', 'pointerX', 'pointerY', 'sourceEvent', 'additionalData']
-
-  render () {
-    const { source, pointerX, pointerY, sourceEvent, additionalData } = this.props
-    this.ba = new BABYLON.ActionEvent(source, pointerX, pointerY, sourceEvent, additionalData)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaActionEvent = makeComponentClass({ 'name': 'ActionEvent', 'props': [{ 'name': 'source', 'type': 'Any' }, { 'name': 'pointerX', 'type': 'Number' }, { 'name': 'pointerY', 'type': 'Number' }, { 'name': 'meshUnderPointer', 'type': 'Nullable' }, { 'name': 'sourceEvent', 'type': 'Any' }, { 'name': 'additionalData', 'type': 'Any' }], 'args': [{ 'name': 'source', 'type': 'Any' }, { 'name': 'pointerX', 'type': 'Number' }, { 'name': 'pointerY', 'type': 'Number' }, { 'name': 'meshUnderPointer', 'type': 'Nullable' }, { 'name': 'sourceEvent', 'type': 'Any' }, { 'name': 'additionalData', 'type': 'Any' }], 'family': 'actions' })
 window.customElements.define('ba-action-event', BaActionEvent)

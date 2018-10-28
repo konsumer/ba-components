@@ -1,23 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-import { getPosition } from '../utils'
-
-// A target camera takes a mesh or position as a target and continues to look at it while it moves.
-// This is the base of the follow, arc rotate cameras and Free camera
-export class BaTargetCamera extends Component {
-  family = 'cameras'
-  acceptedProps = ['name', 'x', 'y', 'z', 'setActiveOnSceneIfNoneActive']
-
-  render () {
-    const { scene } = this.context
-    const { name, x, y, z, setActiveOnSceneIfNoneActive } = this.props
-    const position = getPosition(x, y, z)
-    this.ba = new BABYLON.TargetCamera(name, position, scene, setActiveOnSceneIfNoneActive)
-    this.ba.attachControl(this.context.canvas, true)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaTargetCamera = makeComponentClass({ 'name': 'TargetCamera', 'props': [{ 'name': 'cameraDirection', 'type': 'Vector3' }, { 'name': 'cameraRotation', 'type': 'Vector2' }, { 'name': 'rotation', 'type': 'Vector3' }, { 'name': 'rotationQuaternion', 'type': 'Quaternion' }, { 'name': 'speed', 'type': 'Number' }, { 'name': 'noRotationConstraint', 'type': 'Boolean' }, { 'name': 'lockedTarget', 'type': 'Any' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'position', 'type': 'Vector3' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'setActiveOnSceneIfNoneActive', 'type': 'Boolean' }], 'family': 'cameras' })
 window.customElements.define('ba-target-camera', BaTargetCamera)

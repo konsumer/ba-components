@@ -1,23 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-import { getPosition } from '../utils'
-
-// A follow camera takes a mesh as a target and follows it as it moves. Both a free camera version followCamera and
-// an arc rotate version arcFollowCamera are available.
-export class BaFollowCamera extends Component {
-  family = 'cameras'
-  acceptedProps = ['name', 'x', 'y', 'z']
-
-  render () {
-    const { scene } = this.context
-    const { name, x, y, z } = this.props
-    const position = getPosition(x, y, z)
-    this.ba = new BABYLON.FollowCamera(name, position, scene)
-    this.ba.attachControl(this.context.canvas, true)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaFollowCamera = makeComponentClass({ 'name': 'FollowCamera', 'props': [{ 'name': 'radius', 'type': 'Number' }, { 'name': 'rotationOffset', 'type': 'Number' }, { 'name': 'heightOffset', 'type': 'Number' }, { 'name': 'cameraAcceleration', 'type': 'Number' }, { 'name': 'maxCameraSpeed', 'type': 'Number' }, { 'name': 'lockedTarget', 'type': 'Nullable' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'position', 'type': 'Vector3' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'lockedTarget', 'type': 'Nullable' }], 'family': 'cameras' })
 window.customElements.define('ba-follow-camera', BaFollowCamera)

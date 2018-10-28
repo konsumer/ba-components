@@ -1,19 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Base class of all the textures in babylon.
-// It groups all the common properties the materials, post process, lights... might need
-// in order to make a correct use of the texture.
-export class BaBaseTexture extends Component {
-  family = 'materials'
-  acceptedProps = []
-
-  render () {
-    const { scene } = this.context
-    this.ba = new BABYLON.BaseTexture(scene)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaBaseTexture = makeComponentClass({ 'name': 'BaseTexture', 'props': [{ 'name': 'name', 'type': 'string' }, { 'name': 'hasAlpha', 'type': 'Boolean' }, { 'name': 'getAlphaFromRGB', 'type': 'Boolean' }, { 'name': 'level', 'type': 'Number' }, { 'name': 'coordinatesIndex', 'type': 'Number' }, { 'name': 'coordinatesMode', 'type': 'Number' }, { 'name': 'wrapU', 'type': 'Number' }, { 'name': 'wrapV', 'type': 'Number' }, { 'name': 'wrapR', 'type': 'Number' }, { 'name': 'anisotropicFilteringLevel', 'type': 'Number' }, { 'name': 'isCube', 'type': 'Boolean' }, { 'name': 'is3D', 'type': 'Boolean' }, { 'name': 'gammaSpace', 'type': 'Boolean' }, { 'name': 'isRGBD', 'type': 'Boolean' }, { 'name': 'invertZ', 'type': 'Boolean' }, { 'name': 'lodLevelInAlpha', 'type': 'Boolean' }, { 'name': 'lodGenerationOffset', 'type': 'Number' }, { 'name': 'lodGenerationScale', 'type': 'Number' }, { 'name': 'isRenderTarget', 'type': 'Boolean' }, { 'name': 'uid', 'type': 'String' }, { 'name': 'animations', 'type': ['Animation'] }, { 'name': 'onDisposeObservable', 'type': 'Observable' }, { 'name': 'onDispose', 'type': 'Function' }, { 'name': 'delayLoadState', 'type': 'Number' }, { 'name': 'isBlocking', 'type': 'Boolean' }, { 'name': 'canRescale', 'type': 'Boolean' }, { 'name': 'textureType', 'type': 'Number' }, { 'name': 'textureFormat', 'type': 'Number' }, { 'name': 'sphericalPolynomial', 'type': 'Nullable' }], 'args': [{ 'name': 'scene', 'type': 'Scene' }], 'family': 'materials' })
 window.customElements.define('ba-base-texture', BaBaseTexture)

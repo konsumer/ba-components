@@ -1,23 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-import { getPosition } from '../utils'
-
-// This represents a free type of camera. It can be usefull in First Person Shooter game for instance.
-// Please consider using the new UniversalCamera instead as it adds more functionality like the gamepad.
-export class BaFreeCamera extends Component {
-  family = 'cameras'
-  acceptedProps = ['name', 'x', 'y', 'z', 'setActiveOnSceneIfNoneActive']
-
-  render () {
-    const { scene } = this.context
-    const { name, x, y, z, setActiveOnSceneIfNoneActive } = this.props
-    const position = getPosition(x, y, z)
-    this.ba = new BABYLON.FreeCamera(name, position, scene, setActiveOnSceneIfNoneActive)
-    this.ba.attachControl(this.context.canvas, true)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaFreeCamera = makeComponentClass({ 'name': 'FreeCamera', 'props': [{ 'name': 'ellipsoid', 'type': 'Vector3' }, { 'name': 'ellipsoidOffset', 'type': 'Vector3' }, { 'name': 'checkCollisions', 'type': 'Boolean' }, { 'name': 'applyGravity', 'type': 'Boolean' }, { 'name': 'inputs', 'type': 'FreeCameraInputsManager' }, { 'name': 'angularSensibility', 'type': 'Number' }, { 'name': 'keysUp', 'type': ['Number'] }, { 'name': 'keysDown', 'type': ['Number'] }, { 'name': 'keysLeft', 'type': ['Number'] }, { 'name': 'keysRight', 'type': ['Number'] }, { 'name': 'onCollide', 'type': 'Function' }, { 'name': 'collisionMask', 'type': 'Number' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'position', 'type': 'Vector3' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'setActiveOnSceneIfNoneActive', 'type': 'Boolean' }], 'family': 'cameras' })
 window.customElements.define('ba-free-camera', BaFreeCamera)

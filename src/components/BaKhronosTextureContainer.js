@@ -1,18 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// for description see https://www.khronos.org/opengles/sdk/tools/KTX/
-// for file layout see https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/
-export class BaKhronosTextureContainer extends Component {
-  family = 'materials'
-  acceptedProps = ['arrayBuffer', 'facesExpected', 'threeDExpected', 'textureArrayExpected']
-
-  render () {
-    const { arrayBuffer, facesExpected, threeDExpected, textureArrayExpected } = this.props
-    this.ba = new BABYLON.KhronosTextureContainer(arrayBuffer, facesExpected, threeDExpected, textureArrayExpected)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaKhronosTextureContainer = makeComponentClass({ 'name': 'KhronosTextureContainer', 'props': [{ 'name': 'arrayBuffer', 'type': 'Any' }, { 'name': 'glType', 'type': 'Number' }, { 'name': 'glTypeSize', 'type': 'Number' }, { 'name': 'glFormat', 'type': 'Number' }, { 'name': 'glInternalFormat', 'type': 'Number' }, { 'name': 'glBaseInternalFormat', 'type': 'Number' }, { 'name': 'pixelWidth', 'type': 'Number' }, { 'name': 'pixelHeight', 'type': 'Number' }, { 'name': 'pixelDepth', 'type': 'Number' }, { 'name': 'numberOfArrayElements', 'type': 'Number' }, { 'name': 'numberOfFaces', 'type': 'Number' }, { 'name': 'numberOfMipmapLevels', 'type': 'Number' }, { 'name': 'bytesOfKeyValueData', 'type': 'Number' }, { 'name': 'loadType', 'type': 'Number' }], 'args': [{ 'name': 'arrayBuffer', 'type': 'Any' }, { 'name': 'facesExpected', 'type': 'Number' }, { 'name': 'threeDExpected', 'type': 'Boolean' }, { 'name': 'textureArrayExpected', 'type': 'Boolean' }], 'family': 'materials' })
 window.customElements.define('ba-khronos-texture-container', BaKhronosTextureContainer)

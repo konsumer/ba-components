@@ -1,17 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Base implementation IShadowLight
-// It groups all the common behaviour in order to reduce dupplication and better follow the DRY pattern.
-export class BaShadowLight extends Component {
-  family = 'lights'
-  acceptedProps = []
-
-  render () {
-    this.ba = new BABYLON.ShadowLight()
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaShadowLight = makeComponentClass({ 'name': 'ShadowLight', 'props': [{ 'name': 'position', 'type': 'Vector3' }, { 'name': 'direction', 'type': 'Vector3' }, { 'name': 'shadowMinZ', 'type': 'Number' }, { 'name': 'shadowMaxZ', 'type': 'Number' }, { 'name': 'customProjectionMatrixBuilder', 'type': 'Function' }, { 'name': 'transformedPosition', 'type': 'Vector3' }, { 'name': 'transformedDirection', 'type': 'Vector3' }], 'args': [], 'family': 'lights' })
 window.customElements.define('ba-shadow-light', BaShadowLight)

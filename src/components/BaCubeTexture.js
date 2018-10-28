@@ -1,18 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// Class for creating a cube texture
-export class BaCubeTexture extends Component {
-  family = 'materials'
-  acceptedProps = ['rootUrl', 'noMipmap', 'onLoad', 'onError', 'format', 'prefiltered', 'forcedExtension', 'createPolynomials', 'lodScale', 'lodOffset']
-
-  render () {
-    const { scene } = this.context
-    const { rootUrl, noMipmap, onLoad, onError, format, prefiltered, forcedExtension, createPolynomials, lodScale, lodOffset } = this.props
-    this.ba = new BABYLON.CubeTexture(rootUrl, scene, noMipmap, onLoad, onError, format, prefiltered, forcedExtension, createPolynomials, lodScale, lodOffset)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaCubeTexture = makeComponentClass({ 'name': 'CubeTexture', 'props': [{ 'name': 'url', 'type': 'String' }, { 'name': 'boundingBoxPosition', 'type': 'Vector3' }, { 'name': 'boundingBoxSize', 'type': 'Vector3' }, { 'name': 'rotationY', 'type': 'Number' }], 'args': [{ 'name': 'rootUrl', 'type': 'String' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'extensions', 'type': 'Nullable' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'files', 'type': 'Nullable' }, { 'name': 'onLoad', 'type': 'Nullable' }, { 'name': 'onError', 'type': 'Nullable' }, { 'name': 'format', 'type': 'Number' }, { 'name': 'prefiltered', 'type': 'Boolean' }, { 'name': 'forcedExtension', 'type': 'Any' }, { 'name': 'createPolynomials', 'type': 'Boolean' }, { 'name': 'lodScale', 'type': 'Number' }, { 'name': 'lodOffset', 'type': 'Number' }], 'family': 'materials' })
 window.customElements.define('ba-cube-texture', BaCubeTexture)

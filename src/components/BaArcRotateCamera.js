@@ -1,23 +1,5 @@
 // this file was auto-generated
 
-import BABYLON from 'babylonjs'
-import Component from '../Component'
-
-// This represents an orbital type of camera.
-//
-// This camera always points towards a given target position and can be rotated around that target with the target as the centre of rotation. It can be controlled with cursors and mouse, or with touch events.
-// Think of this camera as one orbiting its target position, or more imaginatively as a spy satellite orbiting the earth. Its position relative to the target (earth) can be set by three parameters, alpha (radians) the longitudinal rotation, beta (radians) the latitudinal rotation and radius the distance from the target position.
-export class BaArcRotateCamera extends Component {
-  family = 'cameras'
-  acceptedProps = ['name', 'alpha', 'beta', 'radius', 'target', 'setActiveOnSceneIfNoneActive']
-
-  render () {
-    const { scene } = this.context
-    const { name, alpha, beta, radius, target, setActiveOnSceneIfNoneActive } = this.props
-    const baRtarget = scene.getNodeByName(target)
-    this.ba = new BABYLON.ArcRotateCamera(name, alpha, beta, radius, baRtarget, scene, setActiveOnSceneIfNoneActive)
-    this.ba.attachControl(this.context.canvas, true)
-  }
-}
-
+import { makeComponentClass } from '../Component'
+export const BaArcRotateCamera = makeComponentClass({ 'name': 'ArcRotateCamera', 'props': [{ 'name': 'alpha', 'type': 'Number' }, { 'name': 'beta', 'type': 'Number' }, { 'name': 'radius', 'type': 'Number' }, { 'name': 'target', 'type': 'Vector3' }, { 'name': 'inertialAlphaOffset', 'type': 'Number' }, { 'name': 'inertialBetaOffset', 'type': 'Number' }, { 'name': 'inertialRadiusOffset', 'type': 'Number' }, { 'name': 'lowerAlphaLimit', 'type': 'Nullable' }, { 'name': 'upperAlphaLimit', 'type': 'Nullable' }, { 'name': 'lowerBetaLimit', 'type': 'Number' }, { 'name': 'upperBetaLimit', 'type': 'Number' }, { 'name': 'lowerRadiusLimit', 'type': 'Nullable' }, { 'name': 'upperRadiusLimit', 'type': 'Nullable' }, { 'name': 'inertialPanningX', 'type': 'Number' }, { 'name': 'inertialPanningY', 'type': 'Number' }, { 'name': 'pinchToPanMaxDistance', 'type': 'Number' }, { 'name': 'panningDistanceLimit', 'type': 'Nullable' }, { 'name': 'panningOriginTarget', 'type': 'Vector3' }, { 'name': 'panningInertia', 'type': 'Number' }, { 'name': 'angularSensibilityX', 'type': 'Number' }, { 'name': 'angularSensibilityY', 'type': 'Number' }, { 'name': 'pinchPrecision', 'type': 'Number' }, { 'name': 'pinchDeltaPercentage', 'type': 'Number' }, { 'name': 'panningSensibility', 'type': 'Number' }, { 'name': 'keysUp', 'type': ['Number'] }, { 'name': 'keysDown', 'type': ['Number'] }, { 'name': 'keysLeft', 'type': ['Number'] }, { 'name': 'keysRight', 'type': ['Number'] }, { 'name': 'wheelPrecision', 'type': 'Number' }, { 'name': 'wheelDeltaPercentage', 'type': 'Number' }, { 'name': 'zoomOnFactor', 'type': 'Number' }, { 'name': 'targetScreenOffset', 'type': 'Vector2' }, { 'name': 'allowUpsideDown', 'type': 'Boolean' }, { 'name': 'useInputToRestoreState', 'type': 'Boolean' }, { 'name': 'inputs', 'type': 'ArcRotateCameraInputsManager' }, { 'name': 'panningAxis', 'type': 'Vector3' }, { 'name': 'bouncingBehavior', 'type': 'Nullable' }, { 'name': 'useBouncingBehavior', 'type': 'Boolean' }, { 'name': 'framingBehavior', 'type': 'Nullable' }, { 'name': 'useFramingBehavior', 'type': 'Boolean' }, { 'name': 'autoRotationBehavior', 'type': 'Nullable' }, { 'name': 'useAutoRotationBehavior', 'type': 'Boolean' }, { 'name': 'onMeshTargetChangedObservable', 'type': 'Observable' }, { 'name': 'onCollide', 'type': 'Function' }, { 'name': 'checkCollisions', 'type': 'Boolean' }, { 'name': 'collisionRadius', 'type': 'Vector3' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'alpha', 'type': 'Number' }, { 'name': 'beta', 'type': 'Number' }, { 'name': 'radius', 'type': 'Number' }, { 'name': 'target', 'type': 'Vector3' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'setActiveOnSceneIfNoneActive', 'type': 'Boolean' }], 'family': 'cameras' })
 window.customElements.define('ba-arc-rotate-camera', BaArcRotateCamera)
