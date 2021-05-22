@@ -1,7 +1,8 @@
-import { getColor } from './utils'
-import Component from './BAComponent'
+// this doesn't return, but sets window.BABYLON
+import 'babylonjs'
+import BaComponent from './ba-component.js'
 
-export default class BaStandardMaterial extends Component {
+class BaStandardMaterial extends BaComponent {
   family = 'materials'
 
   acceptedProps = [
@@ -39,20 +40,14 @@ export default class BaStandardMaterial extends Component {
     'zOffset'
   ]
 
-  render () {
+  constructor () {
+    super()
     if (this.parentNode.family !== 'meshes') {
       throw new Error('Materials are only supported as children of meshes, for now.')
     }
-    const material = new BABYLON.StandardMaterial(this.props.name, this.context.scene)
-    Object.keys(this.props).forEach(p => {
-      // handle color props
-      if (p.toLowerCase().indexOf('color') !== -1) {
-        this.props[p] = getColor(this.props[p])
-      }
-      material[p] = this.props[p]
-    })
-    this.parentNode.mesh.material = material
+    this.importantObject = new BABYLON.StandardMaterial("_temp", this.context.scene)
+    this.parentNode.importantObject.material = this.importantObject
+    this.setInitialProps()
   }
 }
-
 window.customElements.define('ba-standard-material', BaStandardMaterial)

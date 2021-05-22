@@ -1,7 +1,8 @@
-import { getColor, getDirection } from './utils'
-import Component from './BAComponent'
+// this doesn't return, but sets window.BABYLON
+import 'babylonjs'
+import BaComponent from './ba-component.js'
 
-export default class BaHemisphericLight extends Component {
+class BaHemisphericLight extends BaComponent {
   family = 'lights'
 
   acceptedProps = [
@@ -37,19 +38,10 @@ export default class BaHemisphericLight extends Component {
     'worldMatrixFromCache'
   ]
 
-  render () {
-    const light = new BABYLON.HemisphericLight(this.props.name, BABYLON.Vector3.Zero(), this.context.scene)
-    Object.keys(this.props).forEach(p => {
-      // handle color props
-      if (p.toLowerCase().indexOf('color') !== -1) {
-        this.props[p] = getColor(this.props[p])
-      }
-      // handle direction
-      if (p === 'direction') {
-        this.props[p] = getDirection(this.props[p])
-      }
-      light[p] = this.props[p]
-    })
+  constructor () {
+    super()
+    this.importantObject = new BABYLON.HemisphericLight("_temp", BABYLON.Vector3.Zero(), this.context.scene)
+    this.setInitialProps()
   }
 }
 

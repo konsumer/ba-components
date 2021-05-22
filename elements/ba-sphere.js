@@ -1,9 +1,11 @@
-import Component from './BAComponent'
+// this doesn't return, but sets window.BABYLON
+import 'babylonjs'
+import BaComponent from './ba-component.js'
 
-export default class BaSphere extends Component {
+class BaSphere extends BaComponent {
   family = 'meshes'
 
-  acceptedProps = [
+  static observedAttributes = [
     'backUVs',
     'flat',
     'frontUVs',
@@ -23,13 +25,14 @@ export default class BaSphere extends Component {
     // TODO: put all mesh props in here, too
   ]
 
-  render () {
+  constructor () {
+    super()
+    this.setInitialProps()
     const { name, x = 0, y = 0, z = 0, position, ...options } = this.props
     const { scene } = this.context
     const pos = position || new BABYLON.Vector3(x, y, z)
-    this.mesh = BABYLON.MeshBuilder.CreateSphere(name, options, scene)
-    this.mesh.position = pos
+    this.importantObject = BABYLON.MeshBuilder.CreateSphere(name, options, scene)
+    this.importantObject.position = pos
   }
 }
-
 window.customElements.define('ba-sphere', BaSphere)

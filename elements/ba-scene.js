@@ -1,8 +1,9 @@
-import { getColor } from './utils'
-import Component from './BAComponent'
+// this doesn't return, but sets window.BABYLON
+import 'babylonjs'
+import BaComponent from './ba-component.js'
 
-export default class BaScene extends Component {
-  acceptedProps = [
+class BaScene extends BaComponent {
+  static observedAttributes = [
     'actionManager',
     'actionManagers',
     'activeBonesPerfCounter',
@@ -170,17 +171,13 @@ export default class BaScene extends Component {
     'workerCollisions'
   ]
 
-  render () {
-    const scene = new BABYLON.Scene(this.context.engine)
-    this.contextAdditions.scene = scene
-    Object.keys(this.props).forEach(p => {
-      // handle color props
-      if (p.toLowerCase().indexOf('color') !== -1) {
-        this.props[p] = getColor(this.props[p])
-      }
-      scene[p] = this.props[p]
-    })
+  // TODO: add attributeChangedCallback that updates things
+
+  constructor(){
+    super()
+    this.importantObject = new BABYLON.Scene(this.context.engine)
+    this.setInitialProps()
+    this.contextAdditions.scene = this.importantObject
   }
 }
-
 window.customElements.define('ba-scene', BaScene)

@@ -8,16 +8,19 @@ or checkout our README at https://github.com/konsumer/ba-components for differen
 <head>
   <title>BA Components</title>
   <link rel="stylesheet" href="demo.css">
-  <script src="https://cdn.babylonjs.com/babylon.js"></script>
-  <script src="https://cdn.babylonjs.com/babylon.max.js"></script>
-  <script src="https://cdn.babylonjs.com/babylon.worker.js"></script>
-  <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-  <script type="module" src="ba-engine.js"></script>
-  <script type="module" src="ba-scene.js"></script>
-  <script type="module" src="ba-follow-camera.js"></script>
-  <script type="module" src="ba-hemispheric-light.js"></script>
-  <script type="module" src="ba-sphere.js"></script>
-  <script type="module" src="ba-standard-material.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "babylonjs": "https://unpkg.com/babylonjs"
+      }
+    }
+  </script>
+  <script type="module" src="./ba-engine.js"></script>
+  <script type="module" src="./ba-scene.js"></script>
+  <script type="module" src="./ba-follow-camera.js"></script>
+  <script type="module" src="./ba-hemispheric-light.js"></script>
+  <script type="module" src="./ba-sphere.js"></script>
+  <script type="module" src="./ba-standard-material.js"></script>
 </head>
 <body>
   <div id="root">
@@ -32,12 +35,13 @@ or checkout our README at https://github.com/konsumer/ba-components for differen
             cameraAcceleration="0.05"
             maxCameraSpeed="100"
           />
-          <ba-hemispheric-light direction="up" />
+          <ba-hemispheric-light direction="up"></ba-hemispheric-light>
           <ba-sphere name="player" radius="200">
-            <ba-standard-material diffuseColor="tomato" />
+            <ba-standard-material diffuseColor="tomato"></ba-standard-material>
           </ba-sphere>
         </ba-scene>
       </ba-engine>
     </div>
   </div>
 </body>
+

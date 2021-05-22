@@ -20,6 +20,6 @@
   },
   "files": [],
   "dependencies": {
-    "color-string": "^1.5.5"
+    "babylonjs": "^4.2.0"
   }
 }

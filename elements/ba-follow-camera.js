@@ -1,7 +1,8 @@
-import { getColor } from './utils'
-import Component from './BAComponent'
+// this doesn't return, but sets window.BABYLON
+import 'babylonjs'
+import BaComponent from './ba-component.js'
 
-export default class BaFollowCamera extends Component {
+class BaFollowCamera extends BaComponent {
   family = 'cameras'
 
   acceptedProps = [
@@ -64,24 +65,19 @@ export default class BaFollowCamera extends Component {
     'z'
   ]
 
-  render () {
+  constructor () {
+    super()
+    this.setInitialProps()
     const { name, x = 0, y = 0, z = 0, position, lockedTarget, ...options } = this.props
-    const { scene } = this.context
+    const { scene, canvas } = this.context
     const pos = position || new BABYLON.Vector3(x, y, z)
-    const camera = new BABYLON.FollowCamera(
+    this.importantObject = new BABYLON.FollowCamera(
       name,
       pos,
       scene,
       lockedTarget && scene.getMeshByName(lockedTarget)
     )
-    camera.attachControl(this.context.canvas, true)
-    Object.keys(options).forEach(p => {
-      // handle color props
-      if (p.toLowerCase().indexOf('color') !== -1) {
-        this.props[p] = getColor(this.props[p])
-      }
-      camera[p] = options[p]
-    })
+    this.importantObject.attachControl(canvas, true)
   }
 }
 

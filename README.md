@@ -44,9 +44,9 @@ Just make a regular HTML file, and open it:
       cameraAcceleration="0.05"
       maxCameraSpeed="100"
     />
-    <ba-hemispheric-light direction="up" />
+    <ba-hemispheric-light direction="up"></ba-hemispheric-light>
     <ba-sphere name="player" radius="200">
-      <ba-standard-material diffuseColor="tomato" />
+      <ba-standard-material diffuseColor="tomato"></ba-standard-material>
     </ba-sphere>
   </ba-scene>
 </ba-engine>
@@ -78,9 +78,9 @@ For a lot of projects you will use more of these components, and it stars to mak
       cameraAcceleration="0.05"
       maxCameraSpeed="100"
     />
-    <ba-hemispheric-light direction="up" />
+    <ba-hemispheric-light direction="up"></ba-hemispheric-light>
     <ba-sphere name="player" radius="200">
-      <ba-standard-material diffuseColor="tomato" />
+      <ba-standard-material diffuseColor="tomato"></ba-standard-material>
     </ba-sphere>
   </ba-scene>
 </ba-engine>
@@ -134,7 +134,7 @@ window.customElements.define('my-duck', MyDuck)
       cameraAcceleration="0.05"
       maxCameraSpeed="100"
     />
-    <ba-hemispheric-light direction="up" />
+    <ba-hemispheric-light direction="up"></ba-hemispheric-light>
     <my-duck name="duck" x="0" y="0.5" z="0" />
   </ba-scene>
 </ba-engine>
