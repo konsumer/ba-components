@@ -22,9 +22,14 @@ The first use-case is à la carte web-components, in a regular web-page, with no
 Just make a regular HTML file, and open it:
 
 ```html
-<script src="https://cdn.babylonjs.com/babylon.js"></script>
-<script src="https://cdn.babylonjs.com/babylon.max.js"></script>
-<script src="https://cdn.babylonjs.com/babylon.worker.js"></script>
+<!-- this tells the browser where to find this requirement -->
+<script type="importmap">
+  {
+    "imports": {
+      "babylonjs": "https://unpkg.com/babylonjs"
+    }
+  }
+</script>
 
 <!-- optional, but sets up polyfills for older browsers that don't support web-components -->
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
@@ -60,9 +65,14 @@ Since this lib is published on unpkg, all in seperate files, you don't need to i
 For a lot of projects you will use more of these components, and it stars to make sense that they are all bundled, but you still don't want to use a build-system, personally. We got you covered!
 
 ```html
-<script src="https://cdn.babylonjs.com/babylon.js"></script>
-<script src="https://cdn.babylonjs.com/babylon.max.js"></script>
-<script src="https://cdn.babylonjs.com/babylon.worker.js"></script>
+<!-- this tells the browser where to find this requirement -->
+<script type="importmap">
+  {
+    "imports": {
+      "babylonjs": "https://unpkg.com/babylonjs"
+    }
+  }
+</script>
 
 <!-- optional, but sets up polyfills for older browsers that don't support web-components -->
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
@@ -91,9 +101,14 @@ For a lot of projects you will use more of these components, and it stars to mak
 In your own project, you can insert your own custom components that have access to `engine` and `scene`. It's a little more complicated, but once you make them, they are totally reusable, and you can mix them in with all your stuff:
 
 ```html
-<script src="https://cdn.babylonjs.com/babylon.js"></script>
-<script src="https://cdn.babylonjs.com/babylon.max.js"></script>
-<script src="https://cdn.babylonjs.com/babylon.worker.js"></script>
+<!-- this tells the browser where to find this requirement -->
+<script type="importmap">
+  {
+    "imports": {
+      "babylonjs": "https://unpkg.com/babylonjs"
+    }
+  }
+</script>
 
 <!-- optional, but sets up polyfills for older browsers that don't support web-components -->
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
