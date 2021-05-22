@@ -1,5 +1,0 @@
-// this file was auto-generated
-
-import { makeComponentClass } from '../Component'
-export const BaKhronosTextureContainer = makeComponentClass({ 'name': 'KhronosTextureContainer', 'props': [{ 'name': 'arrayBuffer', 'type': 'Any' }, { 'name': 'glType', 'type': 'Number' }, { 'name': 'glTypeSize', 'type': 'Number' }, { 'name': 'glFormat', 'type': 'Number' }, { 'name': 'glInternalFormat', 'type': 'Number' }, { 'name': 'glBaseInternalFormat', 'type': 'Number' }, { 'name': 'pixelWidth', 'type': 'Number' }, { 'name': 'pixelHeight', 'type': 'Number' }, { 'name': 'pixelDepth', 'type': 'Number' }, { 'name': 'numberOfArrayElements', 'type': 'Number' }, { 'name': 'numberOfFaces', 'type': 'Number' }, { 'name': 'numberOfMipmapLevels', 'type': 'Number' }, { 'name': 'bytesOfKeyValueData', 'type': 'Number' }, { 'name': 'loadType', 'type': 'Number' }], 'args': [{ 'name': 'arrayBuffer', 'type': 'Any' }, { 'name': 'facesExpected', 'type': 'Number' }, { 'name': 'threeDExpected', 'type': 'Boolean' }, { 'name': 'textureArrayExpected', 'type': 'Boolean' }], 'family': 'materials' })
-window.customElements.define('ba-khronos-texture-container', BaKhronosTextureContainer)

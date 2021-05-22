@@ -1,5 +1,0 @@
-// this file was auto-generated
-
-import { makeComponentClass } from '../Component'
-export const BaWebVRFreeCamera = makeComponentClass({ 'name': 'WebVRFreeCamera', 'props': [{ 'name': 'webVROptions' }, { 'name': 'rawPose', 'type': 'Nullable' }, { 'name': 'devicePosition', 'type': 'Vector3' }, { 'name': 'deviceRotationQuaternion', 'type': 'Quaternion' }, { 'name': 'deviceScaleFactor', 'type': 'Number' }, { 'name': 'controllers', 'type': [null] }, { 'name': 'onControllersAttachedObservable', 'type': 'Observable' }, { 'name': 'onControllerMeshLoadedObservable', 'type': 'Observable' }, { 'name': 'onPoseUpdatedFromDeviceObservable', 'type': 'Observable' }, { 'name': 'rigParenting', 'type': 'Boolean' }, { 'name': 'leftController', 'type': 'Nullable' }, { 'name': 'rightController', 'type': 'Nullable' }, { 'name': 'updateCacheCalled' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'position', 'type': 'Vector3' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'webVROptions', 'type': 'WebVROptions' }], 'family': 'cameras' })
-window.customElements.define('ba-web-vr-free-camera', BaWebVRFreeCamera)

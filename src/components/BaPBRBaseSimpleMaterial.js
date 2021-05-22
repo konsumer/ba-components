@@ -1,5 +1,0 @@
-// this file was auto-generated
-
-import { makeComponentClass } from '../Component'
-export const BaPBRBaseSimpleMaterial = makeComponentClass({ 'name': 'PBRBaseSimpleMaterial', 'props': [{ 'name': 'maxSimultaneousLights', 'type': 'Number' }, { 'name': 'disableLighting', 'type': 'Boolean' }, { 'name': 'environmentTexture', 'type': 'BaseTexture' }, { 'name': 'invertNormalMapX', 'type': 'Boolean' }, { 'name': 'invertNormalMapY', 'type': 'Boolean' }, { 'name': 'normalTexture', 'type': 'BaseTexture' }, { 'name': 'emissiveColor', 'type': 'Color3' }, { 'name': 'emissiveTexture', 'type': 'BaseTexture' }, { 'name': 'occlusionStrength', 'type': 'Number' }, { 'name': 'occlusionTexture', 'type': 'BaseTexture' }, { 'name': 'alphaCutOff', 'type': 'Number' }, { 'name': 'doubleSided', 'type': 'Boolean' }, { 'name': 'lightmapTexture', 'type': 'BaseTexture' }, { 'name': 'useLightmapAsShadowmap', 'type': 'Boolean' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'scene', 'type': 'Scene' }], 'family': 'materials' })
-window.customElements.define('ba-pbr-base-simple-material', BaPBRBaseSimpleMaterial)

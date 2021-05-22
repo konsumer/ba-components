@@ -1,5 +1,0 @@
-// this file was auto-generated
-
-import { makeComponentClass } from '../Component'
-export const BaCubeTexture = makeComponentClass({ 'name': 'CubeTexture', 'props': [{ 'name': 'url', 'type': 'String' }, { 'name': 'boundingBoxPosition', 'type': 'Vector3' }, { 'name': 'boundingBoxSize', 'type': 'Vector3' }, { 'name': 'rotationY', 'type': 'Number' }], 'args': [{ 'name': 'rootUrl', 'type': 'String' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'extensions', 'type': 'Nullable' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'files', 'type': 'Nullable' }, { 'name': 'onLoad', 'type': 'Nullable' }, { 'name': 'onError', 'type': 'Nullable' }, { 'name': 'format', 'type': 'Number' }, { 'name': 'prefiltered', 'type': 'Boolean' }, { 'name': 'forcedExtension', 'type': 'Any' }, { 'name': 'createPolynomials', 'type': 'Boolean' }, { 'name': 'lodScale', 'type': 'Number' }, { 'name': 'lodOffset', 'type': 'Number' }], 'family': 'materials' })
-window.customElements.define('ba-cube-texture', BaCubeTexture)

@@ -1,39 +1,25 @@
 {
   "name": "ba-components",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Web Components for BabylonJS",
   "scripts": {
-    "build": "babel src/index.js -o index.js",
-    "prebuild": "npm run generate",
-    "prepublish": "npm run build",
-    "build:demo": "parcel build src/index.html",
-    "start": "parcel src/index.html",
-    "generate": "babel-node src/generate/analyze.js && babel-node src/generate/generateComponents.js && babel-node src/generate/generateReact.js"
+    "start": "vite elements",
+    "build": "vite build elements",
+    "generate": "node -r esm tools/generate.js"
   },
-  "keywords": [],
+  "keywords": [
+    "babylonjs",
+    "3d",
+    "web-components"
+  ],
   "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/node": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "babel-eslint": "^10.0.1",
-    "inflection": "^1.12.0",
-    "lodash": "^4.17.11",
-    "parcel-bundler": "^1.10.3",
-    "sort-json": "^2.0.0",
-    "standard": "^12.0.1",
-    "ts-simple-ast": "^17.1.1",
-    "typescript": "^3.1.3"
+    "esm": "^3.2.25",
+    "vite": "^2.3.3"
   },
-  "files": [
-    "dist/index.js"
-  ],
+  "files": [],
   "dependencies": {
-    "babylonjs": "^3.3.0"
-  },
-  "standard": {
-    "parser": "babel-eslint"
+    "color-string": "^1.5.5"
   }
 }

@@ -1,5 +1,0 @@
-// this file was auto-generated
-
-import { makeComponentClass } from '../Component'
-export const BaSpriteManager = makeComponentClass({ 'name': 'SpriteManager', 'props': [{ 'name': 'name', 'type': 'string' }, { 'name': 'sprites', 'type': ['Sprite'] }, { 'name': 'renderingGroupId', 'type': 'Number' }, { 'name': 'layerMask', 'type': 'Number' }, { 'name': 'fogEnabled', 'type': 'Boolean' }, { 'name': 'isPickable', 'type': 'Boolean' }, { 'name': 'cellWidth', 'type': 'Number' }, { 'name': 'cellHeight', 'type': 'Number' }, { 'name': 'onDisposeObservable', 'type': 'Observable' }, { 'name': 'onDispose', 'type': 'Function' }, { 'name': 'texture', 'type': 'Texture' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'imgUrl', 'type': 'String' }, { 'name': 'capacity', 'type': 'Number' }, { 'name': 'cellSize', 'type': 'Any' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'epsilon', 'type': 'Number' }, { 'name': 'samplingMode', 'type': 'Number' }], 'family': 'materials' })
-window.customElements.define('ba-sprite-manager', BaSpriteManager)

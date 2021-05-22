@@ -1,5 +1,0 @@
-// this file was auto-generated
-
-import { makeComponentClass } from '../Component'
-export const BaFreeCamera = makeComponentClass({ 'name': 'FreeCamera', 'props': [{ 'name': 'ellipsoid', 'type': 'Vector3' }, { 'name': 'ellipsoidOffset', 'type': 'Vector3' }, { 'name': 'checkCollisions', 'type': 'Boolean' }, { 'name': 'applyGravity', 'type': 'Boolean' }, { 'name': 'inputs', 'type': 'FreeCameraInputsManager' }, { 'name': 'angularSensibility', 'type': 'Number' }, { 'name': 'keysUp', 'type': ['Number'] }, { 'name': 'keysDown', 'type': ['Number'] }, { 'name': 'keysLeft', 'type': ['Number'] }, { 'name': 'keysRight', 'type': ['Number'] }, { 'name': 'onCollide', 'type': 'Function' }, { 'name': 'collisionMask', 'type': 'Number' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'position', 'type': 'Vector3' }, { 'name': 'scene', 'type': 'Scene' }, { 'name': 'setActiveOnSceneIfNoneActive', 'type': 'Boolean' }], 'family': 'cameras' })
-window.customElements.define('ba-free-camera', BaFreeCamera)

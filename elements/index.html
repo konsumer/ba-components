@@ -1,0 +1,43 @@
+<!--
+
+Welcome Intrepid Hacker!
+This source-code makes up the initial demo of ba-components. You could use it as-is, if you download the elements/ dir,
+or checkout our README at https://github.com/konsumer/ba-components for different ways to use it.
+
+-->
+<head>
+  <title>BA Components</title>
+  <link rel="stylesheet" href="demo.css">
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/babylon.max.js"></script>
+  <script src="https://cdn.babylonjs.com/babylon.worker.js"></script>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+  <script type="module" src="ba-engine.js"></script>
+  <script type="module" src="ba-scene.js"></script>
+  <script type="module" src="ba-follow-camera.js"></script>
+  <script type="module" src="ba-hemispheric-light.js"></script>
+  <script type="module" src="ba-sphere.js"></script>
+  <script type="module" src="ba-standard-material.js"></script>
+</head>
+<body>
+  <div id="root">
+    <h1>ba-components</h1>
+    <p>This is a simple demo of <a href="https://github.com/konsumer/ba-components">ba-components</a></p>
+    <div id="demo">
+      <ba-engine>
+        <ba-scene clearColor="black">
+          <ba-follow-camera
+            lockedTarget="player"
+            heightOffset="4"
+            cameraAcceleration="0.05"
+            maxCameraSpeed="100"
+          />
+          <ba-hemispheric-light direction="up" />
+          <ba-sphere name="player" radius="200">
+            <ba-standard-material diffuseColor="tomato" />
+          </ba-sphere>
+        </ba-scene>
+      </ba-engine>
+    </div>
+  </div>
+</body>

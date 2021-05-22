@@ -1,5 +1,0 @@
-// this file was auto-generated
-
-import { makeComponentClass } from '../Component'
-export const BaHDRCubeTextureAssetTask = makeComponentClass({ 'name': 'HDRCubeTextureAssetTask', 'props': [{ 'name': 'name', 'type': 'string' }, { 'name': 'url', 'type': 'String' }, { 'name': 'size', 'type': 'Number' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'generateHarmonics', 'type': 'Boolean' }, { 'name': 'gammaSpace', 'type': 'Boolean' }, { 'name': 'reserved', 'type': 'Boolean' }, { 'name': 'texture', 'type': 'HDRCubeTexture' }, { 'name': 'onSuccess', 'type': 'Function' }, { 'name': 'onError', 'type': 'Function' }], 'args': [{ 'name': 'name', 'type': 'string' }, { 'name': 'url', 'type': 'String' }, { 'name': 'size', 'type': 'Number' }, { 'name': 'noMipmap', 'type': 'Boolean' }, { 'name': 'generateHarmonics', 'type': 'Boolean' }, { 'name': 'gammaSpace', 'type': 'Boolean' }, { 'name': 'reserved', 'type': 'Boolean' }], 'family': 'materials' })
-window.customElements.define('ba-hdr-cube-texture-asset-task', BaHDRCubeTextureAssetTask)
