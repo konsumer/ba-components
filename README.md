@@ -9,7 +9,7 @@ This is a full set of [babylonJS](https://www.babylonjs.com/) web-components.
 
 ## rational
 
-My hope is to bring you back to the "good old days" of web-dev, where you add soem script-tags in your HTML, and can try stuff out with no overhead, building, etc.
+My hope is to bring you back to the "good old days" of web-dev, where you add some script-tags in your HTML, and can try cool 3D stuff out with no overhead, building, etc.
 
 I worked on the awesome [react-babylonjs](https://github.com/brianzinn/react-babylonjs) and it occured to me that I could write standard [web-components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) that would also work great in react, but allow any modern browser and allow you to use them without any framework or build-system (import them in script-tags, directly.) It would also allow non-react frameworks, like [vue](https://vuejs.org/), [stencil](https://stenciljs.com/) or similar to use them, all in a super-nice declarative style.
 
